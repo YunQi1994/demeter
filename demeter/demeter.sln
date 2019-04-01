@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demeter", "demeter\demeter.csproj", "{438EEDA5-E59C-4531-9088-E9C963994EAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demeter.Tests", "demeter.Tests\demeter.Tests.csproj", "{DE8854CF-E19F-4693-BF81-D773050EF0A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438EEDA5-E59C-4531-9088-E9C963994EAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438EEDA5-E59C-4531-9088-E9C963994EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438EEDA5-E59C-4531-9088-E9C963994EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438EEDA5-E59C-4531-9088-E9C963994EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE8854CF-E19F-4693-BF81-D773050EF0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE8854CF-E19F-4693-BF81-D773050EF0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE8854CF-E19F-4693-BF81-D773050EF0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE8854CF-E19F-4693-BF81-D773050EF0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {858AD8C3-9818-433D-A48A-A51558EEE60E}
+	EndGlobalSection
+EndGlobal
