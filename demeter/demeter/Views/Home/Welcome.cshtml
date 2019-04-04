@@ -1,6 +1,8 @@
-﻿@{
-    ViewBag.Title = "Demeter";
+﻿
+@{
+    ViewBag.Title = "Welcome";
     Layout = null;
+
 }
 
 <!DOCTYPE html>
@@ -8,7 +10,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Demeter</title>
+    <title>Select a business</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Madeon08">
@@ -28,8 +30,6 @@
     <!-- ============== Resource style ============== -->
     <link rel="stylesheet" href="~/Content/assets/css/main.css">
 
-    <link rel="stylesheet" href="~/Content/assets/css/youtube.css">
-
     <!-- Modernizr runs quickly on page load to detect features -->
     <script src="~/Content/assets/js/modernizr.js"></script>
 </head>
@@ -43,44 +43,6 @@
     <div id="wrapper">
 
         <div class="lines-overlay"></div>
-
-        <!-- YouTube link -->
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
-
-        <!-- OPEN - Player control -->
-        <nav id="player-nav">
-            <ul>
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover" >
-                    <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').pauseYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Mute" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').muteYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Unmute" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').unmuteYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Stop" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').stopYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-
-                <li class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
-                    <a class="expand-player"><i class="fa fa-expand"></i></a>
-                </li>
-
-                <li class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
-                    <a class="compress-player"><i class="fa fa-compress"></i></a>
-                </li>
-
-            </ul>
-        </nav> <!-- CLOSE - Player control -->
 
         <div id="main">
 
@@ -101,26 +63,26 @@
             <!-- Header -->
             <header id="header">
 
-                <img src="~/Content/assets/logo.png" alt="" class="logo" />
+                <img src="~/Content/assets/logo.png" alt="logo" class="logo" />
 
-                <h1>Welcome to Demeter</h1>
+                <h1>Select a business to invest</h1>
 
                 @*<p id="text-alert" class="animated-quick"></p>*@
 
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="about icon-popup icon ion-person-stalker"></a>
-                            <p class="name">About</p>
+                            <a href="/Home/Cuisine" class="messages icon-popup icon ion-chatbubble"></a>
+                            @*<span class="notification opacity-0 animated-quick">1</span>*@
+                            <p class="name">Food</p>
                         </li>
 
                         <li>
-                            <a href="#" class="photos icon-popup icon ion-images"></a>
-                            <p class="name">Photos</p>
+                            <a href="#" class="about icon-popup icon ion-person-stalker"></a>
+                            <p class="name">Hair Dressing</p>
                         </li>
                     </ul>
                 </nav>
-
             </header>
 
         </div>
@@ -396,6 +358,7 @@
     <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
     <!-- * Libraries jQuery and Bootstrap - Be careful to not remove them * -->
     <script src="~/Content/assets/js/jquery.min.js"></script>
+
     <script src="~/Content/assets/js/bootstrap.min.js"></script>
 
     <!-- Countdown -->
@@ -410,11 +373,27 @@
     <!-- Swipebox plugin -->
     <script src="~/Content/assets/js/jquery.swipebox.js"></script>
 
-    <!-- YouTube plugin -->
-    <script src="~/Content/assets/js/jquery.mb.YTPlayer.js"></script>
-
-    <!-- Background plugin for mobile -->
+    <!-- Background plugin -->
     <script src="~/Content/assets/js/vegas.js"></script>
+
+    <!-- Background settings -->
+    <script>
+
+        $('body').vegas({
+            slides: [
+                { src: '/Content/assets/img/test1.jpg' },
+                { src: '/Content/assets/img/test2.jpg' },
+                { src: '/Content/assets/img/test3.jpg' }
+            ],
+  
+            // Delay beetween slides in milliseconds.
+            delay: 5000,
+
+            // Chose your transition effect (See the documentation provided in your download pack)
+            transition: 'fade'
+        });
+
+    </script>
 
     <!-- Main JS -->
     <script src="~/Content/assets/js/main.js"></script>

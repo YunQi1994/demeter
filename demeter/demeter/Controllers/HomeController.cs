@@ -14,6 +14,16 @@ namespace demeter.Controllers
             return View();
         }
 
+        public ActionResult Welcome()
+        {
+            return View();
+        }
+
+        public ActionResult Cuisine()
+        {
+            return View();
+        }
+
         // test
         public ActionResult About()
         {

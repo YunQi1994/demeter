@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Demeter";
+﻿
+@{
+    ViewBag.Title = "Cuisine";
     Layout = null;
 }
 
@@ -8,7 +9,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Demeter</title>
+    <title>Cuisine</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Madeon08">
@@ -28,8 +29,6 @@
     <!-- ============== Resource style ============== -->
     <link rel="stylesheet" href="~/Content/assets/css/main.css">
 
-    <link rel="stylesheet" href="~/Content/assets/css/youtube.css">
-
     <!-- Modernizr runs quickly on page load to detect features -->
     <script src="~/Content/assets/js/modernizr.js"></script>
 </head>
@@ -43,44 +42,6 @@
     <div id="wrapper">
 
         <div class="lines-overlay"></div>
-
-        <!-- YouTube link -->
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
-
-        <!-- OPEN - Player control -->
-        <nav id="player-nav">
-            <ul>
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover" >
-                    <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').pauseYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Mute" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').muteYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Unmute" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').unmuteYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Stop" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').stopYTP()"><i class="fa fa-pause"></i></a>
-                </li>
-
-
-                <li class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
-                    <a class="expand-player"><i class="fa fa-expand"></i></a>
-                </li>
-
-                <li class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
-                    <a class="compress-player"><i class="fa fa-compress"></i></a>
-                </li>
-
-            </ul>
-        </nav> <!-- CLOSE - Player control -->
 
         <div id="main">
 
@@ -103,24 +64,34 @@
 
                 <img src="~/Content/assets/logo.png" alt="" class="logo" />
 
-                <h1>Welcome to Demeter</h1>
+                <h1>Select a cuisine</h1>
 
                 @*<p id="text-alert" class="animated-quick"></p>*@
 
                 <nav>
                     <ul>
                         <li>
+                            <a href="#" class="messages icon-popup icon"><img src="~/Content/assets/img/food.jpg" style="width: 100px; height: 100px;" /></a>
+                            @*<span class="notification opacity-0 animated-quick">1</span>*@
+                            <p class="name">Turkish</p>
+                        </li>
+
+                        <li>
                             <a href="#" class="about icon-popup icon ion-person-stalker"></a>
-                            <p class="name">About</p>
+                            <p class="name">Lebanese</p>
                         </li>
 
                         <li>
                             <a href="#" class="photos icon-popup icon ion-images"></a>
-                            <p class="name">Photos</p>
+                            <p class="name">Afghani</p>
+                        </li>
+
+                        <li>
+                            <a href="#" class="photos icon-popup icon ion-images"></a>
+                            <p class="name">Somalian</p>
                         </li>
                     </ul>
                 </nav>
-
             </header>
 
         </div>
@@ -144,7 +115,14 @@
 
                             <div class="container">
 
+
                                 <h1>We're Coming in</h1>
+
+                                
+                                <div class='tableauPlaceholder' id='viz1554370041191' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ma&#47;map_v1&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='map_v1&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ma&#47;map_v1&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>
+                                <script type='text/javascript'>var divElement = document.getElementById('viz1554370041191'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1000px'; vizElement.style.height = '827px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+
+
 
                                 <span class="border"></span>
 
@@ -396,6 +374,7 @@
     <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
     <!-- * Libraries jQuery and Bootstrap - Be careful to not remove them * -->
     <script src="~/Content/assets/js/jquery.min.js"></script>
+
     <script src="~/Content/assets/js/bootstrap.min.js"></script>
 
     <!-- Countdown -->
@@ -410,14 +389,30 @@
     <!-- Swipebox plugin -->
     <script src="~/Content/assets/js/jquery.swipebox.js"></script>
 
-    <!-- YouTube plugin -->
-    <script src="~/Content/assets/js/jquery.mb.YTPlayer.js"></script>
-
-    <!-- Background plugin for mobile -->
+    <!-- Background plugin -->
     <script src="~/Content/assets/js/vegas.js"></script>
 
+    <!-- Background settings -->
+    <script>
+
+        $('body').vegas({
+            slides: [
+                { src: '/Content/assets/img/test1.jpg' },
+                { src: '/Content/assets/img/test2.jpg' },
+                { src: '/Content/assets/img/test3.jpg' }
+            ],
+
+            // Delay beetween slides in milliseconds.
+            delay: 5000,
+
+            // Chose your transition effect (See the documentation provided in your download pack)
+            transition: 'fade'
+        });
+
+    </script>
+
     <!-- Main JS -->
-    <script src="~/Content/assets/js/main.js"></script>
+    <script src="~/Content/assets/js/cuisine.js"></script>
 
 </body>
 </html>
