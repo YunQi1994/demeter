@@ -9,12 +9,12 @@ namespace demeter.Controllers
     public class HomeController : Controller
     {
         
-        public ActionResult Index()
+        public ActionResult Welcome()
         {
             return View();
         }
 
-        public ActionResult Welcome()
+        public ActionResult Business()
         {
             return View();
         }

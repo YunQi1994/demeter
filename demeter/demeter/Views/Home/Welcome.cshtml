@@ -1,8 +1,6 @@
-﻿
-@{
-    ViewBag.Title = "Welcome";
+﻿@{
+    ViewBag.Title = "Demeter";
     Layout = null;
-
 }
 
 <!DOCTYPE html>
@@ -10,7 +8,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Select a business</title>
+    <title>Demeter</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Madeon08">
@@ -19,16 +17,18 @@
     <!-- Standard -->
     <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
     <!-- Retina iPad Touch Icon-->
-    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/assets/img/demeterFavicon.jpg">
     <!-- Retina iPhone Touch Icon-->
-    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/assets/img/demeterFavicon.jpg">
     <!-- Standard iPad Touch Icon-->
-    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/assets/img/demeterFavicon.jpg">
     <!-- Standard iPhone Touch Icon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/assets/img/demeterFavicon.jpg">
 
     <!-- ============== Resource style ============== -->
     <link rel="stylesheet" href="~/Content/assets/css/main.css">
+
+    <link rel="stylesheet" href="~/Content/assets/css/youtube.css">
 
     <!-- Modernizr runs quickly on page load to detect features -->
     <script src="~/Content/assets/js/modernizr.js"></script>
@@ -43,6 +43,44 @@
     <div id="wrapper">
 
         <div class="lines-overlay"></div>
+
+        <!-- YouTube link -->
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
+
+        <!-- OPEN - Player control -->
+        <nav id="player-nav">
+            <ul>
+                <li data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
+                    <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
+                </li>
+
+                <li data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
+                    <a onclick="$('#bgndVideo').pauseYTP()"><i class="fa fa-pause"></i></a>
+                </li>
+
+                <li data-toggle="tooltip" data-placement="bottom" data-title="Stop" data-trigger="hover">
+                    <a onclick="$('#bgndVideo').stopYTP()"><i class="fa fa-stop"></i></a>
+                </li>
+
+                <li data-toggle="tooltip" data-placement="bottom" data-title="Mute" data-trigger="hover">
+                    <a onclick="$('#bgndVideo').muteYTP()"><i class="fa fa-volume-off"></i></a>
+                </li>
+
+                <li data-toggle="tooltip" data-placement="bottom" data-title="Unmute" data-trigger="hover">
+                    <a onclick="$('#bgndVideo').unmuteYTP()"><i class="fa fa-volume-up"></i></a>
+                </li>
+
+
+                <li class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
+                    <a class="expand-player"><i class="fa fa-expand"></i></a>
+                </li>
+
+                <li class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
+                    <a class="compress-player"><i class="fa fa-compress"></i></a>
+                </li>
+
+            </ul>
+        </nav> <!-- CLOSE - Player control -->
 
         <div id="main">
 
@@ -63,26 +101,34 @@
             <!-- Header -->
             <header id="header">
 
-                <img src="~/Content/assets/logo.png" alt="logo" class="logo" />
+                <img src="~/Content/assets/img/demeterlogo.jpg" alt="" class="logo" />
 
-                <h1>Select a business to invest</h1>
+                <h1>Welcome to Demeter</h1>
 
                 @*<p id="text-alert" class="animated-quick"></p>*@
+
+                <br />
+
+                <input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
+                       onclick='window.location = "@Url.Action("Business", "Home")";'/>
+                <br />
 
                 <nav>
                     <ul>
                         <li>
-                            <a href="/Home/Cuisine" class="messages icon-popup icon ion-chatbubble"></a>
-                            @*<span class="notification opacity-0 animated-quick">1</span>*@
-                            <p class="name">Food</p>
+                            <a href="#" class="about icon-popup icon ion-person-stalker"></a>
+                            <br />
+                            <h4 class="name">About us</h4>
                         </li>
 
                         <li>
-                            <a href="#" class="about icon-popup icon ion-person-stalker"></a>
-                            <p class="name">Hair Dressing</p>
+                            <a href="#" class="photos icon-popup icon ion-images"></a>
+                            <br />
+                            <h4 class="name">Photos</h4>
                         </li>
                     </ul>
                 </nav>
+
             </header>
 
         </div>
@@ -92,9 +138,9 @@
     <div class="global-content">
 
         <div class="slider-nav">
-            <a href="#" class="prev-button"><i class="fa fa-hand-o-left"></i></a>
+            @*<a href="#" class="prev-button"><i class="fa fa-hand-o-left"></i></a>*@
             <a href="#" class="close-content"><i class="icon ion-close-round"></i></a>
-            <a href="#" class="next-button"><i class="fa fa-hand-o-right"></i></a>
+            @*<a href="#" class="next-button"><i class="fa fa-hand-o-right"></i></a>*@
         </div>
 
         <section class="content-message slide first">
@@ -168,21 +214,25 @@
 
                             <div class="container">
 
-                                <img src="~/Content/assets/logo.png" alt="" class="logo" />
+                                <img src="~/Content/assets/img/teamLogo.jpg" alt="" class="logo" />
 
                                 <h1>About Us</h1>
 
                                 <span class="border"></span>
 
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country...</p>
+                                <p>
+                                    Demeter a digital platform that supports refugee women with dependent children to start a business in the food and the hairdressing industry.
+
+                                    Demeter is an information centre that shows the necessary insights for women refugees as business, market and demographic analysis among all Victoria, to help those refugees make decisions for both entrepreneurship and dwelling. Presently, entrepreneurial refugee women don’t find the right information and resources at the right time.
+                                </p>
 
                                 <div class="row contact-info">
 
                                     <div class="col-xs-12 col-sm-4 col-lg-4 contact-method">
                                         <i class="icon ion-ios-location-outline"></i>
                                         <p>
-                                            <a href="https://goo.gl/maps/2eF6Z" target="_blank">
-                                                66 Grand Central<br>New York, USA
+                                            <a href="https://goo.gl/maps/vZwE9ssBU7H2" target="_blank">
+                                                900 Dandenong Rd<br>Caulfield East, VIC
                                             </a>
                                         </p>
                                     </div>
@@ -191,23 +241,23 @@
                                         <i class="icon ion-ios-telephone-outline"></i>
                                         <i class="icon ion-social-skype"></i>
                                         <p>
-                                            <a href="tel:+661254611">(+33) 66-1254-611</a><br>
-                                            <a href="tel:+665628146">(+37) 66-5628-146</a>
+                                            <a href="tel:+6141400910121111">(+61) 414-009-101</a><br>
+                                            <a href="tel:+61222455421111">(+61) 222-12-02</a>
                                         </p>
                                     </div>
 
                                     <div class="col-xs-12 col-sm-4 col-lg-4 contact-method">
                                         <i class="icon ion-ios-email-outline"></i>
                                         <p>
-                                            <a href="mailto:your-email@good.com">pom@example.com</a><br>
-                                            <a href="mailto:your-email@good.com">example@pom.com</a>
+                                            <a href="mailto:your-email@good.com">business@demeter.com</a><br>
+                                            <a href="mailto:your-email@good.com">support@demeter.com</a>
                                         </p>
                                     </div>
 
                                 </div>
 
                                 <!-- Contact form -->
-                                <form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
+                                @*<form id="contact-form" name="contact-form" method="POST" data-name="Contact Form">
 
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-lg-6">
@@ -250,7 +300,7 @@
                                         </div>
                                     </div>
 
-                                </form>
+                                </form>*@
                                 <!-- /. Contact form -->
 
                                 <div id="answer"></div>
@@ -273,11 +323,11 @@
 
                             <div class="container">
 
-                                <h1>Photos</h1>
+                                <h1>Photos of our strong women</h1>
 
                                 <span class="border"></span>
 
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country...</p>
+                                <p>Lorem ipsum...</p>
 
                                 <div class="photo-collection row">
 
@@ -358,7 +408,6 @@
     <!-- \\\\\\\\\\\\\\\\\\\/////////////////// -->
     <!-- * Libraries jQuery and Bootstrap - Be careful to not remove them * -->
     <script src="~/Content/assets/js/jquery.min.js"></script>
-
     <script src="~/Content/assets/js/bootstrap.min.js"></script>
 
     <!-- Countdown -->
@@ -373,27 +422,11 @@
     <!-- Swipebox plugin -->
     <script src="~/Content/assets/js/jquery.swipebox.js"></script>
 
-    <!-- Background plugin -->
+    <!-- YouTube plugin -->
+    <script src="~/Content/assets/js/jquery.mb.YTPlayer.js"></script>
+
+    <!-- Background plugin for mobile -->
     <script src="~/Content/assets/js/vegas.js"></script>
-
-    <!-- Background settings -->
-    <script>
-
-        $('body').vegas({
-            slides: [
-                { src: '/Content/assets/img/test1.jpg' },
-                { src: '/Content/assets/img/test2.jpg' },
-                { src: '/Content/assets/img/test3.jpg' }
-            ],
-  
-            // Delay beetween slides in milliseconds.
-            delay: 5000,
-
-            // Chose your transition effect (See the documentation provided in your download pack)
-            transition: 'fade'
-        });
-
-    </script>
 
     <!-- Main JS -->
     <script src="~/Content/assets/js/main.js"></script>

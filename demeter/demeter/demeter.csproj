@@ -153,8 +153,17 @@
     <Content Include="Content\assets\font-awesome\css\font-awesome.min.css" />
     <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\assets\img\business.png" />
+    <Content Include="Content\assets\img\demeterFavicon.jpg" />
+    <Content Include="Content\assets\img\demeterLogo.jpg" />
     <Content Include="Content\assets\img\food.jpg" />
+    <Content Include="Content\assets\img\foodSelectIcon.png" />
+    <Content Include="Content\assets\img\hairSelectIcon.png" />
+    <Content Include="Content\assets\img\lebanese.png" />
+    <Content Include="Content\assets\img\lebaneseBackground.jpg" />
     <Content Include="Content\assets\img\loader.svg" />
+    <Content Include="Content\assets\img\middleEastern.png" />
+    <Content Include="Content\assets\img\middleEasternBackground.jpg" />
     <Content Include="Content\assets\img\overlay.svg" />
     <Content Include="Content\assets\img\pict1-thumb.jpg" />
     <Content Include="Content\assets\img\pict1.jpg" />
@@ -168,9 +177,16 @@
     <Content Include="Content\assets\img\pict5.jpg" />
     <Content Include="Content\assets\img\pict6-thumb.jpg" />
     <Content Include="Content\assets\img\pict6.jpg" />
+    <Content Include="Content\assets\img\selectFoodBack.jpg" />
+    <Content Include="Content\assets\img\selectHairBack.jpg" />
+    <Content Include="Content\assets\img\successWoman1.jpg" />
+    <Content Include="Content\assets\img\teamLogo.jpg" />
     <Content Include="Content\assets\img\test1.jpg" />
     <Content Include="Content\assets\img\test2.jpg" />
     <Content Include="Content\assets\img\test3.jpg" />
+    <Content Include="Content\assets\img\turkish.png" />
+    <Content Include="Content\assets\img\turkishBackground.jpg" />
+    <Content Include="Content\assets\img\womanBaby.JPG" />
     <Content Include="Content\assets\ionicons\ionicons.svg" />
     <Content Include="Content\assets\js\bootstrap.min.js" />
     <Content Include="Content\assets\js\constellation.js" />
@@ -275,9 +291,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutDemeter.cshtml" />
     <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Shared\_LayoutDemeter.cshtml" />
+    <Content Include="Views\Home\Business.cshtml" />
     <Content Include="Views\Home\Cuisine.cshtml" />
   </ItemGroup>
   <ItemGroup>
