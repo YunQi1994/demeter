@@ -269,6 +269,7 @@
     <Content Include="Content\assets\sass\main.scss" />
     <Content Include="Content\assets\sass\youtube.scss" />
     <Content Include="Content\assets\tone\note.m4r" />
+    <None Include="Properties\PublishProfiles\myVM - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

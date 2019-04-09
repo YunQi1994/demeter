@@ -45,10 +45,10 @@
         <div class="lines-overlay"></div>
 
         <!-- YouTube link -->
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
+        @*<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>*@
 
-        <!-- OPEN - Player control -->
-        <nav id="player-nav">
+         @*OPEN - Player control*@ 
+        @*<nav id="player-nav">
             <ul>
                 <li data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
                     <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
@@ -80,11 +80,12 @@
                 </li>
 
             </ul>
-        </nav> <!-- CLOSE - Player control -->
+        </nav>*@ 
+        <!-- CLOSE - Player control -->
 
         <div id="main">
 
-            <ul class="social-icons">
+            @*<ul class="social-icons">
                 <li>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
@@ -96,40 +97,46 @@
                 <li>
                     <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
-            </ul>
+            </ul>*@
 
             <!-- Header -->
-            <header id="header">
 
-                <img src="~/Content/assets/img/demeterlogo.jpg" alt="" class="logo" />
+        <header id="header">
 
-                <h1>Welcome to Demeter</h1>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <img src="~/Content/assets/img/demeterlogo.jpg" alt="" class="logo" />
 
-                @*<p id="text-alert" class="animated-quick"></p>*@
+            <h1>Welcome to Demeter</h1>
 
-                <br />
+            @*<p id="text-alert" class="animated-quick"></p>*@
 
-                <input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
-                       onclick='window.location = "@Url.Action("Business", "Home")";'/>
-                <br />
+            <br />
 
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#" class="about icon-popup icon ion-person-stalker"></a>
-                            <br />
-                            <h4 class="name">About us</h4>
-                        </li>
+            <input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
+                   onclick='window.location = "@Url.Action("Business", "Home")";' />
+            <br />
 
-                        <li>
-                            <a href="#" class="photos icon-popup icon ion-images"></a>
-                            <br />
-                            <h4 class="name">Photos</h4>
-                        </li>
-                    </ul>
-                </nav>
+            <nav>
+            <ul>
+                <li>
+                    <a href="#" class="about icon-popup icon ion-person-stalker"></a>
+                    <br />
+                    <h4 class="name">About us</h4>
+                </li>
 
-            </header>
+                @*<li>
+                    <a href="#" class="photos icon-popup icon ion-images"></a>
+                    <br />
+                    <h4 class="name">Photos</h4>
+                </li>*@
+            </ul>
+        </nav>
+
+        </header>
 
         </div>
 
@@ -139,7 +146,7 @@
 
         <div class="slider-nav">
             @*<a href="#" class="prev-button"><i class="fa fa-hand-o-left"></i></a>*@
-            <a href="#" class="close-content"><i class="icon ion-close-round"></i></a>
+            <a href="#" class="close-content"><h2><i class="icon ion-close-round"></i></h2></a>
             @*<a href="#" class="next-button"><i class="fa fa-hand-o-right"></i></a>*@
         </div>
 
