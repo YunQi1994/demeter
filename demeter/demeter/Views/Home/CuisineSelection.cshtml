@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Cuisine Selection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Styles.Render("~/Content/Site.css");
+
+}
+
+<style>
+
+    .column {
+        width: 100%;
+    }
+
+    .image-wrapper {
+        position: relative;
+        width: 250px;
+    }
+
+        .image-wrapper p {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            border: 1px solid #FFF;
+            width: 218px;
+            color: #FFF;
+            margin: 5px;
+        }
+</style>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+
+
+<div class="container" style="margin-top:100px">
+
+    <div class="row line">
+        <h4 class="col-xs-3 stepText2"><b>Get Started</b></h4>
+        <h4 class="col-xs-3 stepText2"><b>Business Selection</b></h4>
+        <h4 class="col-xs-3 stepText2"><b>Food Industry</b></h4>
+        <h4 class="col-xs-3 stepText2"><b>Cuisine Map</b></h4>
+    </div>
+
+    <div class="row">
+        <a href="/Home/Welcome"><div class="col-xs-3"><div class="step step2"></div></div></a>
+        <a href="/Home/BusinessSelection"><div class="col-xs-3"><div class="step step2"></div></div></a>     
+        <div class="col-xs-3"><div class="step step2 active"></div></div>
+        <div class="col-xs-3"><div class="step step2"></div></div>
+    </div>
+</div>
+
+<br />
+
+<h1 style="color:black; text-align:center"><b>Select a Cuisine of Interest</b></h1>
+
+<br />
+<br />
+
+@*Business Selection Icons*@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="/Home/TurkishCuisine"><div><img src="~/Content/assets/img/turkish.png" class="img-responsive" style="width: 80%; height: 80%; margin-left:inherit" /></div></a>
+            <h3 style="text-align:center">Turkish Cuisine</h3>
+        </div>
+
+
+        <div class="col-xs-4">
+            <a href="/Home/MiddleEasternCuisine"><div><img src="~/Content/assets/img/middleEastern.png" class="img-responsive" style="width: 80%; height: 80%; margin-right: inherit" /></div></a>
+            <h3 style="text-align:center">Middle Eastern Cuisine</h3>
+        </div>
+
+
+        <div class="col-xs-4">
+            <a href="/Home/LebaneseCuisine"><div><img src="~/Content/assets/img/lebaneseCuisine.png" class="img-responsive" style="width: 80%; height: 100%; margin:auto" /></div></a>
+            <h3 style="text-align:center">Lebanese Cuisine</h3>
+        </div>
+
+    </div>
+</div>
+
+<br />
+
+<div style="text-align:center">
+    <a href="/Home/BusinessSelection"><div id="prev">BACK</div></a>
+    @*<div id="nextDis" class="disabled">NEXT</div>*@
+</div>
+
+<!-- Progress Bar -->
+<script>
+        $('document').ready(function () {
+            var count = 0;
+            $('.step').each(function () {
+                count++;
+
+            });
+
+            var i = 0;
+            //Next
+            $('#next').on('click', function () {
+                if (count > i + 1) {
+                    i++;
+                    $('.active').removeClass('active');
+                    $('.step').eq(i).addClass('active');
+                }
+            });
+            //Back
+            $('#prev').on('click', function () {
+                if (i > 0) {
+                    i--;
+                    $('.active').removeClass('active');
+                    $('.step').eq(i).addClass('active');
+                }
+            });
+        });
+</script>
+
+
+<!-- Modernizr runs quickly on page load to detect features -->
+<script src="~/Content/assets/js/modernizr.js"></script>
+
+

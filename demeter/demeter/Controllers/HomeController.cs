@@ -19,7 +19,38 @@ namespace demeter.Controllers
             return View();
         }
 
+        public ActionResult BusinessSelection()
+        {
+            return View();
+        }
+
+        public ActionResult CuisineSelection()
+        {
+            return View();
+        }
+
+
         public ActionResult Cuisine()
+        {
+            return View();
+        }
+
+        public ActionResult TurkishCuisine()
+        {
+            return View();
+        }
+
+        public ActionResult LebaneseCuisine()
+        {
+            return View();
+        }
+
+        public ActionResult MiddleEasternCuisine()
+        {
+            return View();
+        }
+
+        public ActionResult Hairdressing()
         {
             return View();
         }

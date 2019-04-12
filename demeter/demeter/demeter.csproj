@@ -156,12 +156,18 @@
     <Content Include="Content\assets\img\business.png" />
     <Content Include="Content\assets\img\demeterFavicon.jpg" />
     <Content Include="Content\assets\img\demeterLogo.jpg" />
+    <Content Include="Content\assets\img\favicon.ico" />
     <Content Include="Content\assets\img\food.jpg" />
     <Content Include="Content\assets\img\foodSelectIcon.png" />
+    <Content Include="Content\assets\img\getStarted.png" />
+    <Content Include="Content\assets\img\getStartedV2.png" />
     <Content Include="Content\assets\img\hairSelectIcon.png" />
     <Content Include="Content\assets\img\lebanese.png" />
     <Content Include="Content\assets\img\lebaneseBackground.jpg" />
+    <Content Include="Content\assets\img\lebaneseCuisine.png" />
+    <Content Include="Content\assets\img\lebaneseCuisineV2.png" />
     <Content Include="Content\assets\img\loader.svg" />
+    <Content Include="Content\assets\img\logoCircle.jpg" />
     <Content Include="Content\assets\img\middleEastern.png" />
     <Content Include="Content\assets\img\middleEasternBackground.jpg" />
     <Content Include="Content\assets\img\overlay.svg" />
@@ -296,6 +302,12 @@
     <Content Include="Views\Shared\_LayoutDemeter.cshtml" />
     <Content Include="Views\Home\Business.cshtml" />
     <Content Include="Views\Home\Cuisine.cshtml" />
+    <Content Include="Views\Home\Hairdressing.cshtml" />
+    <Content Include="Views\Home\BusinessSelection.cshtml" />
+    <Content Include="Views\Home\CuisineSelection.cshtml" />
+    <Content Include="Views\Home\TurkishCuisine.cshtml" />
+    <Content Include="Views\Home\LebaneseCuisine.cshtml" />
+    <Content Include="Views\Home\MiddleEasternCuisine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

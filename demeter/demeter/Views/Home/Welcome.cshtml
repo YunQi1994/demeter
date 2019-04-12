@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Demeter";
+    ViewBag.Title = "Welcome to Demeter";
     Layout = null;
 }
 
@@ -8,22 +8,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Demeter</title>
+    <title>Welcome to Demeter</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Madeon08">
 
     <!-- ================= Favicon ================== -->
     <!-- Standard -->
-    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
-    <!-- Retina iPad Touch Icon-->
-    <link rel="apple-touch-icon" sizes="144x144" href="~/Content/assets/img/demeterFavicon.jpg">
-    <!-- Retina iPhone Touch Icon-->
-    <link rel="apple-touch-icon" sizes="114x114" href="~/Content/assets/img/demeterFavicon.jpg">
-    <!-- Standard iPad Touch Icon-->
-    <link rel="apple-touch-icon" sizes="72x72" href="~/Content/assets/img/demeterFavicon.jpg">
-    <!-- Standard iPhone Touch Icon-->
-    <link rel="apple-touch-icon" sizes="57x57" href="~/Content/assets/img/demeterFavicon.jpg">
+    <link rel="shortcut icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
 
     <!-- ============== Resource style ============== -->
     <link rel="stylesheet" href="~/Content/assets/css/main.css">
@@ -36,21 +29,21 @@
 
 <body>
 
-    <div class="loading-part">
+    @*<div class="loading-part">
         <div class="loader-home">Loading...</div>
-    </div>
+    </div>*@
 
     <div id="wrapper">
 
-        <div class="lines-overlay"></div>
+
 
         <!-- YouTube link -->
-        @*<a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>*@
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
 
          @*OPEN - Player control*@ 
-        @*<nav id="player-nav">
+        <nav id="player-nav">
             <ul>
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
+                <li id="play" data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
                     <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
                 </li>
 
@@ -71,33 +64,35 @@
                 </li>
 
 
-                <li class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
+                <li id="fullScreen" class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
                     <a class="expand-player"><i class="fa fa-expand"></i></a>
                 </li>
 
-                <li class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
+                <li id="exitFullScreen" class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
                     <a class="compress-player"><i class="fa fa-compress"></i></a>
                 </li>
 
             </ul>
-        </nav>*@ 
+
+            <br />
+            <h6 style="width:auto" id="clickPlay"><i><b>Click Play to watch who we are!</b></i></h6>
+
+        </nav>
         <!-- CLOSE - Player control -->
 
         <div id="main">
 
-            @*<ul class="social-icons">
+            <ul class="social-icons">
                 <li>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
-
                 <li>
                     <a href="#"><i class="fa fa-facebook"></i></a>
                 </li>
-
                 <li>
                     <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
-            </ul>*@
+            </ul>
 
             <!-- Header -->
 
@@ -105,27 +100,26 @@
 
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <img src="~/Content/assets/img/demeterlogo.jpg" alt="" class="logo" />
+            <img src="~/Content/assets/img/logoCircle.jpg" class="logo" style="position:center" />
 
             <h1>Empowering Refugee Women Entrepreneurs</h1>
 
             @*<p id="text-alert" class="animated-quick"></p>*@
 
             <br />
+             
+            <a href="/Home/BusinessSelection"><img src="~/Content/assets/img/getStartedV2.png" /></a>
 
-            <input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
-                   onclick='window.location = "@Url.Action("Business", "Home")";' />
+            @*<input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
+                   onclick='window.location = "@Url.Action("BusinessSelection", "Home")";' />*@
             <br />
 
             <nav>
             <ul>
                 <li>
-                    <a href="#" class="about icon-popup icon ion-person-stalker"></a>
+                    @*<a href="#" class="about icon-popup icon ion-person-stalker"></a>
                     <br />
-                    <h4 class="name">About us</h4>
+                    <h4 class="name">About us</h4>*@
                 </li>
 
                 @*<li>
@@ -219,7 +213,7 @@
                     <div class="content-cell">
                         <div class="content-inner">
 
-                            <div class="container">
+                            <div class="container-fluid">
 
                                 <img src="~/Content/assets/img/teamLogo.jpg" alt="" class="logo" />
 
@@ -407,6 +401,7 @@
 
     <!-- Footer -->
     <footer id="footer">
+        <a href="#" class="about icon-popup icon ion-person-stalker, copyright"><b>About us</b></a> <nbsp></nbsp>
         <span class="copyright"> &copy; JUP1T0R 2019 - Made for strong women</span>
     </footer>
 
@@ -437,6 +432,20 @@
 
     <!-- Main JS -->
     <script src="~/Content/assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#fullScreen").click(function () {
+                $("#clickPlay").hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#exitFullScreen").click(function () {
+                $("#clickPlay").show();
+            });
+        });
+    </script>
 
 </body>
 </html>

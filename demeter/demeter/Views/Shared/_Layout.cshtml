@@ -5,35 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="shortcut icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="navbar-header" >
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse" style="color:white">
                 </button>
-                @Html.ActionLink("Demeter", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="/Home/Welcome" class="navbar-brand" style="font-size:25px">Demeter</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right" style="font-size:large; font-family:Arial, Helvetica, sans-serif">
+                    @*<li class="dropdown">
+            <a href="/Home/BusinessSelection" class="dropdown-toggle" data-toggle="dropdown">Business Selection<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="/Home/BusinessSelection">Business Selection</a></li>
+                <li><a href="/Home/CuisineSelection">Cuisine Selection</a></li>
+            </ul>
+        </li>*@
+                    <li>
+                        <a href="/Home/BusinessSelection">Business Selection</a>
+                    </li>
+                    <li>
+                        <a href="#">About us</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQs</a>
+                    </li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - demeter</p>
-        </footer>
     </div>
+
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6><a href="#"></a>About us</h6>
+                    <p class="text-justify">
+                        <i>Empowering Women Refugees</i> - Demeter a digital platform that supports refugee women with dependent children to start a business in the food and the hairdressing industry.
+                        Demeter is an information centre that shows the necessary insights for women refugees as business, market and demographic analysis among all Victoria, to help those refugees make decisions for both entrepreneurship and dwelling. Presently, entrepreneurial refugee women don’t find the right information and resources at the right time.
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Sitemap</h6>
+                    <ul class="footer-links">
+                        <li><a href="/Home/Welcome">Home</a></li>
+                        <li><a href="/Home/BusinessSelection">Business Selection</a></li>
+                        <li><a href="/Home/CuisineSelection">Cuisine Selection</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6></h6>
+                    <br />
+                    <ul class="footer-links">
+                        <li><a href="/Home/Hairdressing">Hairdressing Map</a></li>
+                        <li><a href="/Home/TurkishCuisine">Turkish Cuisine Map</a></li>
+                        <li><a href="/Home/LebaneseCuisine">Lebanese Cuisine Map</a></li>
+                        <li><a href="/Home/MiddleEasternCuisine">Middle Eastern Cuisine Map</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                        Copyright &copy; 2019 All Rights Reserved by
+                        <a href="/Home/Welcome">Demeter</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
