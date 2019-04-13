@@ -25,6 +25,14 @@
 
     <!-- Modernizr runs quickly on page load to detect features -->
     <script src="~/Content/assets/js/modernizr.js"></script>
+
+    <style>
+        .img-responsive {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -41,10 +49,10 @@
         <nav id="player-nav">
             <ul>
                 <li id="play" data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').playYTP(); $('#expandVideo').click()"><i class="fa fa-play"></i></a>
+                    <a onclick="$('#bgndVideo').playYTP(); $('#expandVideo').click(); $('#pause').show()"><i class="fa fa-play"></i></a>
                 </li>
 
-                <li data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
+                <li id="pause" data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
                     <a onclick="$('#bgndVideo').pauseYTP(); $('#compressVideo').click()"><i class="fa fa-pause"></i></a>
                 </li>
 
@@ -81,7 +89,7 @@
 
             <ul class="social-icons">
                 <li>
-                    <a href="#" onclick="$('#player-nav').hide()" class="about icon-popup icon ion"><i class="fa fa-info-circle"></i> <b></b></a>
+                    <a href="#" onclick="$('#player-nav').toggle(100)" class="about icon-popup icon ion"><i class="fa fa-info"></i></a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -150,9 +158,9 @@
 
                             <div class="container-fluid">
 
-                                <img src="~/Content/assets/img/teamLogo.jpg" alt="" class="logo" />
+                                <img src="~/Content/assets/img/demeterLogo.jpg" alt="" class="logo" />
 
-                                <h1>About Us</h1>
+                                <h1>About Demeter</h1>
 
                                 <span class="border"></span>
 
@@ -321,69 +329,33 @@
 
                             <div class="container">
 
-                                <h1>Photos of our strong women</h1>
+                                <img src="/Content/assets/img/teamLogo.jpg" />
 
-                                <span class="border"></span>
+                                    <span class="border"></span>
 
-                                <p>Lorem ipsum...</p>
+                                    <p>Lorem ipsum...</p>
 
-                                <div class="photo-collection row">
+                                    <div class="photo-collection row">
 
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item">
-                                        <a href="~/Content/assets/img/pict1.jpg" title="My Caption 1" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict1-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
+                                        <div class="col-xs-12 col-sm-3 col-lg-3 photo-item">
+                                            <img src="~/Content/assets/img/me.png" title="John - Software Developer" class="img-responsive">
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-3 col-lg-3 photo-item">
+                                            <img src="~/Content/assets/img/prashanth.png" title="Prash - Business Analyst" class="img-responsive">
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-3 col-lg-3 photo-item">
+                                            <img src="~/Content/assets/img/Joseph.jpg" title="John - Business Analyst" class="img-responsive">
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-3 col-lg-3 photo-item">
+                                            <img src="~/Content/assets/img/ting.png" title="Ting - Data Scientist" class="img-responsive">
+                                        </div>
+
+                                    
+
                                     </div>
-
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item">
-                                        <a href="~/Content/assets/img/pict2.jpg" title="My Caption 2" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict2-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item">
-                                        <a href="~/Content/assets/img/pict3.jpg" title="My Caption 3" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict3-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item 4">
-                                        <a href="~/Content/assets/img/pict4.jpg" title="My Caption" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict4-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item 5">
-                                        <a href="~/Content/assets/img/pict5.jpg" title="My Caption" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict5-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
-                                    </div>
-
-                                    <div class="col-xs-12 col-sm-4 col-lg-4 photo-item 6">
-                                        <a href="~/Content/assets/img/pict6.jpg" title="My Caption" class="swipebox">
-                                            <figure>
-                                                <img src="~/Content/assets/img/pict6-thumb.jpg" alt="" class="img-responsive" />
-                                            </figure>
-                                            <span class="text-open"></span>
-                                        </a>
-                                    </div>
-
-                                </div>
 
                             </div>
 
@@ -398,7 +370,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <a href="#" class="about icon-popup icon ion-person-stalker, copyright" onclick="$('#player-nav').hide()"><b>About us</b></a> <nbsp></nbsp>
+        <a href="#" class="photos icon-popup icon ion-images, copyright-text" , copyright" onclick="$('#player-nav').hide()">Contact us</a>
         <span class="copyright"> &copy; JUP1T0R 2019 - Made for strong women</span>
     </footer>
 
@@ -446,6 +418,7 @@
 
         $(document).ready(function () {
             $("#fullScreen").hide();
+            $('#pause').hide()
             });
 
     </script>
