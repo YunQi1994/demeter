@@ -14,23 +14,12 @@ namespace demeter.Controllers
             return View();
         }
 
-        public ActionResult Business()
-        {
-            return View();
-        }
-
         public ActionResult BusinessSelection()
         {
             return View();
         }
 
         public ActionResult CuisineSelection()
-        {
-            return View();
-        }
-
-
-        public ActionResult Cuisine()
         {
             return View();
         }

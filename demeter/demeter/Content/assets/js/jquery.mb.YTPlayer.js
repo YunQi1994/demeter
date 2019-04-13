@@ -16,7 +16,7 @@ $(document).ready(function($) {
   		$( "#main" ).fadeIn( "600", "linear");
   		$( ".full-play" ).removeClass( "display-none" );
 		$( ".comp-play" ).addClass( "display-none" );
-	});
+    });
 
     var onMobile = false;
             

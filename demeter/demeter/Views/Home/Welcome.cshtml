@@ -34,25 +34,22 @@
     </div>*@
 
     <div id="wrapper">
-
-
-
         <!-- YouTube link -->
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=CD-E-LDc384',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
+        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=34ZmKbe5oG4',containment:'body',autoPlay:false, mute:false, startAt:0, opacity:1}"></a>
 
          @*OPEN - Player control*@ 
         <nav id="player-nav">
             <ul>
                 <li id="play" data-toggle="tooltip" data-placement="bottom" data-title="Play" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
+                    <a onclick="$('#bgndVideo').playYTP(); $('#expandVideo').click()"><i class="fa fa-play"></i></a>
                 </li>
 
                 <li data-toggle="tooltip" data-placement="bottom" data-title="Pause" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').pauseYTP()"><i class="fa fa-pause"></i></a>
+                    <a onclick="$('#bgndVideo').pauseYTP(); $('#compressVideo').click()"><i class="fa fa-pause"></i></a>
                 </li>
 
                 <li data-toggle="tooltip" data-placement="bottom" data-title="Stop" data-trigger="hover">
-                    <a onclick="$('#bgndVideo').stopYTP()"><i class="fa fa-stop"></i></a>
+                    <a onclick="$('#bgndVideo').stopYTP()" href="/Home/Welcome"><i class="fa fa-stop"></i></a>
                 </li>
 
                 <li data-toggle="tooltip" data-placement="bottom" data-title="Mute" data-trigger="hover">
@@ -65,11 +62,11 @@
 
 
                 <li id="fullScreen" class="full-play" data-toggle="tooltip" data-placement="bottom" data-title="Fullscreen" data-trigger="hover">
-                    <a class="expand-player"><i class="fa fa-expand"></i></a>
+                    <a class="expand-player" id="expandVideo"><i class="fa fa-expand"></i></a>
                 </li>
 
                 <li id="exitFullScreen" class="comp-play display-none" data-toggle="tooltip" data-placement="bottom" data-title="Reduce" data-trigger="hover">
-                    <a class="compress-player"><i class="fa fa-compress"></i></a>
+                    <a class="compress-player" id="compressVideo"; onclick="$('#fullScreen').show()"><i class="fa fa-compress"></i></a>
                 </li>
 
             </ul>
@@ -83,6 +80,9 @@
         <div id="main">
 
             <ul class="social-icons">
+                <li>
+                    <a href="#" onclick="$('#player-nav').hide()" class="about icon-popup icon ion"><i class="fa fa-info-circle"></i> <b></b></a>
+                </li>
                 <li>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
@@ -140,71 +140,9 @@
 
         <div class="slider-nav">
             @*<a href="#" class="prev-button"><i class="fa fa-hand-o-left"></i></a>*@
-            <a href="#" class="close-content"><h2><i class="icon ion-close-round"></i></h2></a>
+            <a href="#" class="close-content"><h2><i class="icon ion-close-round"; onclick="$('#player-nav').show()"></i></h2></a>
             @*<a href="#" class="next-button"><i class="fa fa-hand-o-right"></i></a>*@
         </div>
-
-        <section class="content-message slide first">
-
-            <div class="content-in ">
-                <div class="content-table">
-                    <div class="content-cell">
-                        <div class="content-inner">
-
-                            <div class="container">
-
-                                <h1>We're Coming in</h1>
-
-                                <span class="border"></span>
-
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country...</p>
-
-                                <div id="countdown_dashboard">
-
-                                    <!-- Days / if you need only 2 figures for the day, delete the first line <div class="digit">0</div> -->
-                                    <div class="dash-glob">
-                                        <div class="dash days_dash">
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <div class="digit">0</div>
-                                            <sup>Days</sup>
-                                        </div>
-
-                                    </div>
-
-                                </div> <!-- .countdown_dashboard -->
-
-                                <form action="~/Content/assets/php/notify-me.php" id="notifyMe" method="POST" class="news-form">
-
-                                    <div class="form-group">
-                                        <div class="controls">
-
-                                            <input type="text" id="mail-sub" name="email" placeholder="Write your email to be alerted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your email to be alerted'" class="form-control email srequiredField">
-
-                                            <button class="btn btn-lg submit">Subscribe</button>
-
-                                        </div>
-                                    </div>
-
-                                </form>
-
-                                <div class="block-message">
-                                    <!-- OPEN - Newsletter message -->
-                                    <div class="message">
-
-                                        <p class="notify-valid"></p>
-
-                                    </div> <!-- CLOSE - Newsletter message -->
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
 
         <section class="content-about slide">
 
@@ -315,6 +253,68 @@
 
         </section>
 
+        <section class="content-message slide first">
+
+            <div class="content-in ">
+                <div class="content-table">
+                    <div class="content-cell">
+                        <div class="content-inner">
+
+                            <div class="container">
+
+                                <h1>We're Coming in</h1>
+
+                                <span class="border"></span>
+
+                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country...</p>
+
+                                <div id="countdown_dashboard">
+
+                                    <!-- Days / if you need only 2 figures for the day, delete the first line <div class="digit">0</div> -->
+                                    <div class="dash-glob">
+                                        <div class="dash days_dash">
+                                            <div class="digit">0</div>
+                                            <div class="digit">0</div>
+                                            <div class="digit">0</div>
+                                            <sup>Days</sup>
+                                        </div>
+
+                                    </div>
+
+                                </div> <!-- .countdown_dashboard -->
+
+                                <form action="~/Content/assets/php/notify-me.php" id="notifyMe" method="POST" class="news-form">
+
+                                    <div class="form-group">
+                                        <div class="controls">
+
+                                            <input type="text" id="mail-sub" name="email" placeholder="Write your email to be alerted" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Write your email to be alerted'" class="form-control email srequiredField">
+
+                                            <button class="btn btn-lg submit">Subscribe</button>
+
+                                        </div>
+                                    </div>
+
+                                </form>
+
+                                <div class="block-message">
+                                    <!-- OPEN - Newsletter message -->
+                                    <div class="message">
+
+                                        <p class="notify-valid"></p>
+
+                                    </div> <!-- CLOSE - Newsletter message -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
         <section class="content-photos slide last">
 
             <div class="content-in ">
@@ -401,7 +401,7 @@
 
     <!-- Footer -->
     <footer id="footer">
-        <a href="#" class="about icon-popup icon ion-person-stalker, copyright"><b>About us</b></a> <nbsp></nbsp>
+        <a href="#" class="about icon-popup icon ion-person-stalker, copyright" onclick="$('#player-nav').hide()"><b>About us</b></a> <nbsp></nbsp>
         <span class="copyright"> &copy; JUP1T0R 2019 - Made for strong women</span>
     </footer>
 
@@ -434,6 +434,13 @@
     <script src="~/Content/assets/js/main.js"></script>
 
     <script>
+
+        $(document).ready(function () {
+            $("#").click(function () {
+                $("#clickPlay").hide();
+            });
+        });
+
         $(document).ready(function () {
             $("#fullScreen").click(function () {
                 $("#clickPlay").hide();
@@ -441,10 +448,9 @@
         });
 
         $(document).ready(function () {
-            $("#exitFullScreen").click(function () {
-                $("#clickPlay").show();
+            $("#fullScreen").hide();
             });
-        });
+
     </script>
 
 </body>
