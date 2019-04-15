@@ -8,7 +8,6 @@ namespace demeter.Controllers
 {
     public class HomeController : Controller
     {
-        // comment
         public ActionResult Welcome()
         {
             return View();
