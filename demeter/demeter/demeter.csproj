@@ -169,6 +169,7 @@
     <Content Include="Content\assets\img\loader.svg" />
     <Content Include="Content\assets\img\logoCircle.jpg" />
     <Content Include="Content\assets\img\me.png" />
+    <Content Include="Content\assets\img\menu.svg" />
     <Content Include="Content\assets\img\middleEastern.png" />
     <Content Include="Content\assets\img\middleEasternBackground.jpg" />
     <Content Include="Content\assets\img\overlay.svg" />
