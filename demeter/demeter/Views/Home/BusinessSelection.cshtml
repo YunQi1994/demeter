@@ -29,6 +29,18 @@
             margin: 5px;
         }
 
+    #table {
+        padding: 5px;
+        background-color: black;
+        border-radius: 50px
+    }
+
+    #hair {
+        padding: 5px;
+        background-color: white;
+        border-radius: 50px
+    }
+
 </style>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -60,12 +72,12 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-6">
-             <a href="/Home/CuisineSelection"><div><img src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-left:inherit" /></div></a>
+             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-left:inherit" /></div></a>
              <h3 style="text-align:center">Restaurant Business</h3>
         </div>
 
         <div class="col-xs-6">
-            <a href="/Home/Hairdressing"><div><img src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-right: inherit" /></div></a>
+            <a href="/Home/Hairdressing"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-right: inherit" /></div></a>
             <h3 style="text-align:center">Hairdressing Business</h3>
         </div>
     </div>

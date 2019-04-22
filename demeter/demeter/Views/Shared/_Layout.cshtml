@@ -21,7 +21,7 @@
                 <a href="/Home/Welcome" class="navbar-brand" style="font-size:25px">Demeter</a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right" style="font-size:large; font-family:Arial, Helvetica, sans-serif">
+                <ul id="demeterNav" class="nav navbar-nav navbar-right" style="font-size:large; font-family:Arial, Helvetica, sans-serif">
                     @*<li class="dropdown">
             <a href="/Home/BusinessSelection" class="dropdown-toggle" data-toggle="dropdown">Business Selection<b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -32,12 +32,12 @@
                     <li>
                         <a href="/Home/BusinessSelection">Business Selection</a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="#">About us</a>
                     </li>
                     <li>
                         <a href="#">FAQs</a>
-                    </li>
+                    </li>*@
                 </ul>
             </nav>
         </div>
@@ -100,3 +100,22 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+<script>
+
+    $(document).ready(function () {
+        $(".navbar-toggle").css("background-color", "#D4AF37");
+        $(".navbar-toggle").css("margin-top", "15px");
+        $("a").css("color", "#eceaea");
+
+    });
+
+    $("a").mouseover(function () {
+        $(this).css("color", "#D4AF37");
+    });
+
+    $("a").mouseout(function () {
+        $(this).css("color", "#eceaea");
+    });
+
+</script>

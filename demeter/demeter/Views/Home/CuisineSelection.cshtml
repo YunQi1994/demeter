@@ -27,6 +27,13 @@
             color: #FFF;
             margin: 5px;
         }
+
+    img {
+        border: 2px solid #021a40;
+        padding: 4px;
+        background-color: black;
+        border-radius: 50px
+    }
 </style>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -43,7 +50,7 @@
 
     <div class="row">
         <a href="/Home/Welcome"><div class="col-xs-3"><div class="step step2"></div></div></a>
-        <a href="/Home/BusinessSelection"><div class="col-xs-3"><div class="step step2"></div></div></a>     
+        <a href="/Home/BusinessSelection"><div class="col-xs-3"><div class="step step2"></div></div></a>
         <div class="col-xs-3"><div class="step step2 active"></div></div>
         <div class="col-xs-3"><div class="step step2"></div></div>
     </div>
@@ -88,32 +95,38 @@
 
 <!-- Progress Bar -->
 <script>
-        $('document').ready(function () {
-            var count = 0;
-            $('.step').each(function () {
-                count++;
+    $('document').ready(function () {
+        var count = 0;
+        $('.step').each(function () {
+            count++;
 
-            });
-
-            var i = 0;
-            //Next
-            $('#next').on('click', function () {
-                if (count > i + 1) {
-                    i++;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
-            //Back
-            $('#prev').on('click', function () {
-                if (i > 0) {
-                    i--;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
         });
+
+        var i = 0;
+        //Next
+        $('#next').on('click', function () {
+            if (count > i + 1) {
+                i++;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+        //Back
+        $('#prev').on('click', function () {
+            if (i > 0) {
+                i--;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+    });
+
+    $(".img-responsive").mouseover(function () {
+        $(this).css("background-color", "blue");
+    });
 </script>
+
+
 
 
 <!-- Modernizr runs quickly on page load to detect features -->
