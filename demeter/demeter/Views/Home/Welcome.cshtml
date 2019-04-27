@@ -40,6 +40,8 @@
         #getStartedButton {
             height: 300px;
             max-width: 100%;
+            border-radius:200px;
+            padding: 4px;
         }
     </style>
 
@@ -123,7 +125,7 @@
 
             <br />
              
-            <a href="/Home/BusinessSelection"><img src="~/Content/assets/img/getStartedV2.png" id="getStartedButton"/></a>
+            <a href="/Home/BusinessSelection" style="background-color:white"><img src="~/Content/assets/img/getStartedV2.png" id="getStartedButton" onmouseover="$(this).css('background-color', '#90EE90')" onmouseout="$(this).css('background-color', 'white')" style="background-color:white"/></a>
 
             @*<input type="button" style="background-color:green" class="btn btn-primary btn-lg" value="Get Started"
                    onclick='window.location = "@Url.Action("BusinessSelection", "Home")";' />*@
