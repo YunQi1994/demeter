@@ -28,12 +28,23 @@
             margin: 5px;
         }
 
-    img {
+    #tr {
         border: 2px solid #021a40;
         padding: 4px;
         background-color: black;
         border-radius: 50px
     }
+
+    #prev {
+        padding: 6px;
+        background-color: black;
+        border-radius: 40px;
+        width: 15%;
+    }
+
+        #prev:hover, #next:hover {
+            background: #D4AF37;
+        }
 </style>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -42,17 +53,20 @@
 <div class="container" style="margin-top:100px">
 
     <div class="row line">
-        <h4 class="col-xs-3 stepText2"><b>Get Started</b></h4>
-        <h4 class="col-xs-3 stepText2"><b>Business Selection</b></h4>
-        <h4 class="col-xs-3 stepText2"><b>Food Industry</b></h4>
-        <h4 class="col-xs-3 stepText2"><b>Cuisine Map</b></h4>
+        @*<h4 class="col-xs-4 stepText2"><img style="width:15%; height:10%" src="~/Content/assets/img/rightArrow.png" /></h4>*@
+        <h4 class="col-xs-1 stepText2"><img style="width:50%; height:10%" src="~/Content/assets/img/rightArrow.png" /></h4>
+        <h4 style="font-size:x-large" class="col-xs-5 stepText2"><b>Business Selection</b></h4>
+        <h4 style="font-size:x-large" class="col-xs-3 stepText2"><b>Cuisine Selection</b></h4>
+        @*<h4 class="col-xs-3 stepText2"><b>Cuisine Selection</b></h4>*@
+        <h4 class="col-xs-2 stepText2"><img style="width:20%; height:10%" src="~/Content/assets/img/rightArrow.png" /></h4>
     </div>
 
     <div class="row">
-        <a href="/Home/Welcome"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#90EE90')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
-        <a href="/Home/BusinessSelection"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', 'black')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
-        <div class="col-xs-3"><div class="step step2 active" style="background-color:#D4AF37"></div></div>
-        <div class="col-xs-3"><div class="step step2"></div></div>
+        @*<a href="/Home/Welcome"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#90EE90')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>*@
+        @*<div class="col-xs-4"><div class="step step2 active" style="background-color:#D4AF37"></div></div>*@
+        <a href="/Home/BusinessSelection"><div class="col-xs-7"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
+        <a href="/Home/CuisineSelection"><div class="col-xs-1"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
+        @*<a href="/Home/BusinessSelection"><div class="col-xs-5"><div class="step step2 active" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>*@
     </div>
 </div>
 
@@ -67,19 +81,19 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-4">
-            <a href="/Home/TurkishCuisine"><div><img src="~/Content/assets/img/turkish.png" class="img-responsive" style="width: 80%; height: 80%; margin-left:40px" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
+            <a href="/Home/TurkishCuisine"><div><img id="tr" src="~/Content/assets/img/turkish.png" class="img-responsive" style="width: 80%; height: 80%; margin-left:40px" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
             <h4 style="margin-left:118px; font-weight:bold">Turkish Cuisine</h4>
         </div>
 
 
         <div class="col-xs-4">
-            <a href="/Home/MiddleEasternCuisine"><div><img src="~/Content/assets/img/middleEastern.png" class="img-responsive" style="width: 80%; height: 80%; margin-left: 30px" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
+            <a href="/Home/MiddleEasternCuisine"><div><img id="tr" src="~/Content/assets/img/middleEastern.png" class="img-responsive" style="width: 80%; height: 80%; margin-left: 30px" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
             <h4 style="margin-left:75px; font-weight:bold">Middle Eastern Cuisine</h4>
         </div>
 
 
         <div class="col-xs-4">
-            <a href="/Home/LebaneseCuisine"><div><img src="~/Content/assets/img/lebaneseCuisine.png" class="img-responsive" style="width: 84%; height: 100%; margin:auto" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
+            <a href="/Home/LebaneseCuisine"><div><img id="tr" src="~/Content/assets/img/lebaneseCuisine.png" class="img-responsive" style="width: 84%; height: 100%; margin:auto" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
             <h4 style="text-align:center; font-weight:bold">Lebanese Cuisine</h4>
         </div>
 
