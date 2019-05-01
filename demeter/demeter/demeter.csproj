@@ -1942,6 +1942,7 @@
     <Content Include="Views\Home\MiddleEasternCuisine.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\LandingPage.cshtml" />
+    <Content Include="Views\Home\PreferenceTK.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

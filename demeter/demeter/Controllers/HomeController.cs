@@ -52,5 +52,10 @@ namespace demeter.Controllers
         {
             return View();
         }
+
+        public ActionResult PreferenceTK()
+        {
+            return View();
+        }
     }
 }
