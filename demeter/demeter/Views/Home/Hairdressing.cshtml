@@ -5,6 +5,47 @@
     Styles.Render("~/Content/Site.css");
 }
 
+<style>
+
+    .column {
+        width: 100%;
+    }
+
+    .image-wrapper {
+        position: relative;
+        width: 250px;
+    }
+
+        .image-wrapper p {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            border: 1px solid #FFF;
+            width: 218px;
+            color: #FFF;
+            margin: 5px;
+        }
+
+    #tr {
+        border: 2px solid #021a40;
+        padding: 4px;
+        background-color: black;
+        border-radius: 50px
+    }
+
+    #prev, #next {
+        padding: 6px;
+        background-color: black;
+        border-radius: 40px;
+        width: 15%;
+    }
+
+        #prev:hover, #next:hover {
+            background: #D4AF37;
+        }
+</style>
+
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 <br />
@@ -12,68 +53,68 @@
 <div class="container">
     <br />
     <h2 class="text-center"><b>Hairdressing Industry</b></h2>
-`
+    `
 
     <div class="row line">
-        <h4 class="col-xs-4 stepText2"><b>Get Started</b></h4>
         <h4 class="col-xs-4 stepText2"><b>Business Selection</b></h4>
-        <h4 class="col-xs-4 stepText2"><b>Hairdressing Business Map</b></h4>
+        <h4 class="col-xs-4 stepText2"><b>Preference Hairdressing Business</b></h4>
+        <h4 class="col-xs-4 stepText2"><b>Search Suburb of your choice</b></h4>
     </div>
 
     <div class="row">
-        <a href="/Home/Welcome"><div class="col-xs-4"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#90EE90')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
-        <a href="/Home/BusinessSelection"><div class="col-xs-4"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', 'black')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
-        <div class="col-xs-3"><div class="step step2 active" style="background-color:#D4AF37"></div></div>
+        <a href="/Home/BusinessSelection"><div class="col-xs-4"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
+        <a href="/Home/PreferenceHD"><div class="col-xs-4"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></></div></a>
+        <a href="/Home/Hairdressing"><div class="col-xs-4"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></></div></a>
     </div>
 </div>
+<br />
 
-<br />
-<br />
+<p style="margin: 1% 1%; font-size: large">
+    Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+</p>
 
 @*Hairdressing business map*@
 
-<div class="map-responsive">
-
-            @*<div class='tableauPlaceholder' id='viz1554703976737' style='position: center'>
-                <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ha&#47;hair_map_v4&#47;Hairdressing&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='hair_map_v4&#47;Hairdressing' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ha&#47;hair_map_v4&#47;Hairdressing&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object>
-            </div>*@
-            <iframe class="col-lg-12" style="width:100%; height:855px" src="https://tongguoshuanlou.shinyapps.io/test_app_v11_hair_legended/"> </iframe>
-
-    <div style="text-align:center">
-        <a href="/Home/BusinessSelection"><div id="prev" >BACK</div></a>
-        @*<div id="nextDis" class="disabled">NEXT</div>*@
+<div class="col-xs-12">
+    <div class="map-responsive">
+        <iframe class="col-xs-12" style="width:100%; height:700px" src="https://tongguoshuanlou.shinyapps.io/IT3_Defaul_map/"> </iframe>
+        <div style="text-align:center">
+            <a href="/Home/PreferenceHD"><div id="prev">BACK TO PREFERENCES</div></a>
+            @*<div id="nextDis" class="disabled">NEXT</div>*@
+        </div>
     </div>
+    <br />
+    <br />
 </div>
+<!-- Hairdressing Map -->
+@*<script type='text/javascript'>var divElement = document.getElementById('viz1554703976737'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1080px'; vizElement.style.height = '917px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>*@
 
-    <!-- Hairdressing Map -->
-    @*<script type='text/javascript'>var divElement = document.getElementById('viz1554703976737'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1080px'; vizElement.style.height = '917px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>*@
+<!-- Progress Bar -->
+<script>
+    $('document').ready(function () {
+        var count = 0;
+        $('.step').each(function () {
+            count++;
 
-    <!-- Progress Bar -->
-    <script>
-        $('document').ready(function () {
-            var count = 0;
-            $('.step').each(function () {
-                count++;
-
-            });
-
-            var i = 0;
-            //Next
-            $('#next').on('click', function () {
-                if (count > i + 1) {
-                    i++;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
-            //Back
-            $('#prev').on('click', function () {
-                if (i > 0) {
-                    i--;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
         });
 
-    </script>
+        var i = 0;
+        //Next
+        $('#next').on('click', function () {
+            if (count > i + 1) {
+                i++;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+        //Back
+        $('#prev').on('click', function () {
+            if (i > 0) {
+                i--;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+    });
+
+</script>

@@ -57,5 +57,46 @@ namespace demeter.Controllers
         {
             return View();
         }
+
+        public ActionResult PreferenceLB()
+        {
+            return View();
+        }
+
+        public ActionResult PreferenceME()
+        {
+            return View();
+        }
+
+        public ActionResult PreferenceHD()
+        {
+            return View();
+        }
+
+
+
+        public ActionResult CompareTK()
+        {
+            return View();
+        }
+
+        public ActionResult CompareME()
+        {
+            return View();
+        }
+
+        public ActionResult CompareLB()
+        {
+            ViewBag.pageSubject = "Compare Two Suburbs in Lebanese Cuisine";
+            return View();
+            
+        }
+
+        public ActionResult CompareHD()
+        {
+            ViewBag.pageSubject = "Compare Two Suburbs in Hairdressing Business";
+            return View();
+
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Turkish Cuisine";
+    ViewBag.Title = "Compare Lebanese Cuisine Suburbs";
     Layout = "~/Views/Shared/_Layout.cshtml";
     Styles.Render("~/Content/Site.css");
 }
@@ -52,21 +52,20 @@
 <br />
 <div class="container">
     <br />
-   
-    <h2 class="text-center"><b>Search Suburb of your choice in Turkish Cuisine</b></h2>
-    <br />
+    <h2 class="text-center"><b>@ViewBag.pageSubject</b></h2>
+
     <div class="row line">
         <h4 class="col-xs-3 stepText2"><b>Business Selection</b></h4>
         <h4 class="col-xs-3 stepText2"><b>Cuisine Selection</b></h4>
-        <h4 class="col-xs-3 stepText2"><b>Preference Turkish</b></h4>
-        <h4 class="col-xs-3 stepText2"><b>Search Suburb Turkish</b></h4>
+        <h4 class="col-xs-3 stepText2"><b>Preference Turkish Cuisine</b></h4>
+        <h4 class="col-xs-3 stepText2"><b>Compare Suburbs in Lebanese Cuisine</b></h4>
     </div>
 
     <div class="row">
         <a href="/Home/BusinessSelection"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
         <a href="/Home/CuisineSelection"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
         <a href="/Home/PreferenceTK"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></></div></a>
-        <a href="/Home/TurkishCuisine"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></></div></a>
+        <a href="/Home/CompareLB"><div class="col-xs-3"><div class="step step2" id="progressClick" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></></div></a>
     </div>
 </div>
 
@@ -78,17 +77,15 @@
 
 <div class="col-xs-12">
     <div class="map-responsive">
-        <iframe class="col-xs-12" style="width:100%; height:700px" src="https://tongguoshuanlou.shinyapps.io/IT3_Defaul_map/"> </iframe>
+        <iframe class="col-xs-12" style="width:100%; height:705px" src="https://tongguoshuanlou.shinyapps.io/IT3_Search_and_Comparison/"> </iframe>
         <div style="text-align:center">
-            <a href="/Home/PreferenceTK"><div id="prev">BACK TO PREFERENCES</div></a>
+            <a href="/Home/PreferenceLB"><div id="prev">BACK TO PREFERENCES</div></a>
             @*<div id="nextDis" class="disabled">NEXT</div>*@
         </div>
     </div>
     <br />
     <br />
 </div>
-
-
 
 <!-- Progress Bar -->
 <script>

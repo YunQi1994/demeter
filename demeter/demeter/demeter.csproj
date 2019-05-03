@@ -1943,6 +1943,13 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\LandingPage.cshtml" />
     <Content Include="Views\Home\PreferenceTK.cshtml" />
+    <Content Include="Views\Home\PreferenceLB.cshtml" />
+    <Content Include="Views\Home\PreferenceME.cshtml" />
+    <Content Include="Views\Home\CompareTK.cshtml" />
+    <Content Include="Views\Home\CompareME.cshtml" />
+    <Content Include="Views\Home\CompareLB.cshtml" />
+    <Content Include="Views\Home\PreferenceHD.cshtml" />
+    <Content Include="Views\Home\CompareHD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
