@@ -1950,6 +1950,10 @@
     <Content Include="Views\Home\CompareLB.cshtml" />
     <Content Include="Views\Home\PreferenceHD.cshtml" />
     <Content Include="Views\Home\CompareHD.cshtml" />
+    <Content Include="Views\Home\SliderTK.cshtml" />
+    <Content Include="Views\Home\SliderME.cshtml" />
+    <Content Include="Views\Home\SliderLB.cshtml" />
+    <Content Include="Views\Home\SliderHD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

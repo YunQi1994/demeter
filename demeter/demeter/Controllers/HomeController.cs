@@ -98,5 +98,33 @@ namespace demeter.Controllers
             return View();
 
         }
+
+        public ActionResult SliderTK()
+        {
+            ViewBag.sliderPageSubject = "Set your best suburbs in Turkish Cuisine";
+            return View();
+
+        }
+
+        public ActionResult SliderME()
+        {
+            ViewBag.sliderPageSubject = "Set your best suburbs in Middle Eastern Cuisine";
+            return View();
+
+        }
+
+        public ActionResult SliderLB()
+        {
+            ViewBag.sliderPageSubject = "Set your best suburbs in Lebanese Cuisine";
+            return View();
+
+        }
+
+        public ActionResult SliderHD()
+        {
+            ViewBag.sliderPageSubject = "Set your best suburbs in Hairdressing Business";
+            return View();
+
+        }
     }
 }
