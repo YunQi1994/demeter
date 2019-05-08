@@ -33,12 +33,15 @@
         padding: 6px;
         background-color: black;
         border-radius: 40px;
+        width: 10%;
+        height: 10%;
     }
 
     #hair {
         padding: 6px;
         background-color: white;
         border-radius: 40px;
+        resize:both;
     }
 
     #prev {
@@ -58,12 +61,12 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
 
 
-<div class="container" style="margin-top:100px">
+<div class="container" style="margin-top:5%">
 
     <div class="row line">
         @*<h4 class="col-xs-4 stepText2"><b>Get Started</b></h4>*@
         <h4 class="col-xs-4 stepText2"></h4>
-        <h4 class="col-xs-4 stepText2" style="font-size:x-large"><b>Business Selection</b></h4>
+        <h4 class="col-xs-4 stepText2" style="font-size:1.7rem; margin-top:2%"><b>Business Selection</b></h4>
         <h4 class="col-xs-4 stepText2"></h4>
     </div>
 
@@ -73,21 +76,20 @@
         @*<div class="col-xs-4"><div class="step step2"></div></div>*@
 </div>
 </div>
-<br />
-<h1 style="color:black; text-align:center"><b>Select a Business of Interest</b></h1>
-<br />
+
+<h2 style="color:black; text-align:center; margin-top: 3%"><b>Select a Business of Interest</b></h2>
 <br />
 
 @*Business Selection Icons*@
 <div class="container">
     <div class="row">
         <div class="col-xs-4 col-xs-offset-2">
-             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 100%; height: 100%; margin-left:inherit" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
+             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-left:inherit" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
              <h4 style="text-align:center; font-weight:bold">Restaurant Business</h4>
         </div>
 
         <div class="col-xs-4">
-            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 100%; height: 100%; margin-right: inherit" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'white')"/></div></a>
+            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 90%; height: 90%; margin-right: inherit" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'white')"/></div></a>
             <h4 style="text-align:center; font-weight:bold">Hairdressing Business</h4>
         </div>
     </div>
