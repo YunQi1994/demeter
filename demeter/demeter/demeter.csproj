@@ -141,6 +141,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\img\19percent.png" />
+    <Content Include="Content\assets\img\300_big.png" />
+    <Content Include="Content\assets\img\area1.png" />
+    <Content Include="Content\assets\img\area2.png" />
+    <Content Include="Content\assets\img\children.png" />
+    <Content Include="Content\assets\img\Dependent_children.png" />
+    <Content Include="Content\assets\img\home_2x.png" />
     <Content Include="Content\assets\img\scrolldown_latest.png" />
     <Content Include="Content\assets\css\animate.css" />
     <Content Include="Content\assets\css\bootstrap.min.css" />
@@ -187,10 +194,12 @@
     <Content Include="Content\assets\img\selectFoodBack.jpg" />
     <Content Include="Content\assets\img\selectHairBack.jpg" />
     <Content Include="Content\assets\img\teamLogo.jpg" />
+    <Content Include="Content\assets\img\there_are.png" />
     <Content Include="Content\assets\img\topbottom.png" />
     <Content Include="Content\assets\img\turkish.png" />
     <Content Include="Content\assets\img\turkishBackground.jpg" />
     <Content Include="Content\assets\img\webtreats-paper-pattern-6-grey.jpg" />
+    <Content Include="Content\assets\img\where_button.png" />
     <Content Include="Content\assets\ionicons\ionicons.svg" />
     <Content Include="Content\assets\js\bootstrap.min.js" />
     <Content Include="Content\assets\js\ChunkFive_400.font.js" />
