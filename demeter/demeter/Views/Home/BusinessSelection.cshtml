@@ -31,17 +31,21 @@
 
     #table {
         padding: 6px;
-        background-color: black;
+        border-color: black;
         border-radius: 40px;
+        background-color: #ececec;
         width: 10%;
         height: 10%;
+        border: 6px solid #021a40;
     }
 
     #hair {
         padding: 6px;
         background-color: white;
         border-radius: 40px;
-        resize:both;
+        resize: both;
+        border-color: white;
+        border: 6px solid white;
     }
 
     #prev {
@@ -83,13 +87,13 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-4 col-xs-offset-2">
-             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 80%; height: 90%; margin-left:20%" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')"/></div></a>
+             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 80%; height: 90%; margin-left:20%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')"/></div></a>
              <h5 style="text-align:center; font-weight:bold; margin-left: 20%">Restaurant Business</h5>
         </div>
 
         <div class="col-xs-4">
-            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 80%; height: 90%; margin-right: inherit" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'white')"/></div></a>
-            <h5 style="text-align:center; font-weight:bold; margin-right: 23%">Hairdressing Business</h5>
+            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 85%; height: 90%; margin-right: inherit; margin-top: -2%" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'white')"/></div></a>
+            <h5 style="text-align:center; font-weight:bold; margin-right: 16%; margin-top:-0.5%">Hairdressing Business</h5>
         </div>
     </div>
 </div>

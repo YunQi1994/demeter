@@ -1,7 +1,8 @@
 ﻿
-@{
-    Layout = null;
-}
+    @{
+        ViewBag.Title = "Welcome to Demeter";
+        Layout = null;
+    }
 
 
 <!DOCTYPE html>
@@ -14,7 +15,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Creative - Start Bootstrap Theme</title>
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+
+    <title>Welcome to Demeter</title>
 
     <!-- Font Awesome Icons -->
     <link href="~/Content/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -29,55 +35,113 @@
     <!-- Theme CSS - Includes Bootstrap -->
     <link href="~/Content/assets/css/creative.min.css" rel="stylesheet">
 
+    <!-- Font-family google font api -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+        a, p, h1, h2, h3, h4, h5, h6, div, header, body, button, ul, li {
+            font-family: 'Montserrat', light;
+            font-size: 1.5rem;
+        }
+        #landingStart {
+            background-color: #16224D;
+            font-family: Montserrat, light;
+        }
+
+        #slogan {
+            font-family: Montserrat, Bold;
+        }
+
+        hr.new4 {
+            border: 1.8px solid black;
+            border-radius: 20%;
+            width: 5%
+        }
+
+        .centered {
+            position: relative; /* or absolute */
+            margin-top: 1%;
+            left: 45%;
+        }
+
+    </style>
+
 </head>
 
 <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 col-xs-12" id="mainNav" style="width: 100%">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+            <a class="navbar-brand js-scroll-trigger" style="font-size:1.1rem; font-family: Montserrat, SemiBold; font-weight: bolder;
+             color: #16224D"onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"        
+             href="/Home/LandingPage">Demeter</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <a id="burak" class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light; 
+                           color: #16224D"onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                           href="/Home/BusinessSelection">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                        <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
+                        color: #16224D"onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+   
+                           href="/Home/CuisineSelection">Food Industry</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
+                        color: #16224D"onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+
+                           href="/Home/PreferenceHD">Hairdressing Industry</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
+                        color: #16224D"onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                        href="#">Supporting Information</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <!-- Masthead -->
-    <header class="masthead">
-        <div class="container h-100">
+    <header class="thead-light">
+        <div class="container h-100" style="margin: auto; margin-top: 10%; margin-bottom: 8%">
             <div class="row h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">Your Favorite Source of Free Bootstrap Themes</h1>
-                    <hr class="divider my-4">
+                <div class="col-lg-10">
+
+                    <img src="~/Content/assets/img/demeter_logo_latest.png" class="logo" id="logoDemeter" style="position:center; height:15%; width:15%; margin-bottom: 3%" />
+
+                    <br />
+
+
+                    <h1 class="font-weight-bolder" style="color: #16224D; font-size: 2rem">Empower Refugee Women Entrepeneurs</h1>
+                    <hr class="new4" style="margin-top: 3%; margin-bottom: 3%">
                 </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+
+                <div class="col-lg-10 align-self-baseline">
+                    <p class="font-weight-bold" id="slogan" style="font-family: Montserrat, Black; color: #16224D; font-size: 1.22rem">We support Australia's next entrepreneurs in hairdressing and food industry</p>
+                    <br />
+                    <a id="landingStart" style="width: 40%; height: 75px; font-size: 2rem; padding: 1.5%" class="btn btn-primary btn-xl js-scroll-trigger" href="/Home/BusinessSelection"
+                       onmouseover="$(this).css('background-color', '#D4AF37')" onmouseout="$(this).css('background-color', '#16224D')">Start</a>
                 </div>
             </div>
         </div>
+
+        <a href="#about"><div><img id="table" src="~/Content/assets/img/scrolldown_latest.png" class="img-responsive" style="width: 5%; height: 5%; margin-left:47.5%; margin-top:-4%; margin-bottom: 1%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')" /></div></a>
+
+
     </header>
 
     <!-- About Section -->
-    <section class="page-section bg-primary" id="about">
-        <div class="container">
+    <section class="page-section" style="background-color: white" id="about">
+        @*<div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
                     <h2 class="text-white mt-0">We've got what you need!</h2>
@@ -86,7 +150,47 @@
                     <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
                 </div>
             </div>
+        </div>*@
+
+        <hr class="d-lg-block" />
+
+
+        <div class="container">
+            <h2 class="text-center mt-0">Do you know?</h2>
+            <hr class="divider my-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Up to Date</h3>
+                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Ready to Publish</h3>
+                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Made with Love</h3>
+                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="d-lg-block" />
+
+
+            <a href="#services"><div><img id="table" src="~/Content/assets/img/scrolldown_latest.png" class="img-responsive" style="width: 5%; height: 5%; margin-left:47.5%; margin-top:5%; margin-bottom: 1%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')" /></div></a>
+
         </div>
+
+
+
     </section>
 
     <!-- Services Section -->
@@ -135,7 +239,7 @@
                     <img class="card-img-top" src="~/Content/assets/portfolio/fullsize/1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Test Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+                        <p class="card-text">Test Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <button class="btn btn-primary" style="background-color:#16244D; border-color:#16244D;" onclick="window.location.href='/Home/BusinessSelection'">Continue</button>
                     </div>
                 </div>
@@ -164,87 +268,87 @@
         <br />
 
         @*<div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/1.jpg">
-                        <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/1.jpg" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">
-                                Category
+                <div class="row no-gutters">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/1.jpg">
+                            <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/1.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
                             </div>
-                            <div class="project-name">
-                                Project Name
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/2.jpg">
+                            <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/2.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/3.jpg">
+                            <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/3.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/4.jpg">
+                            <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/4.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="~/Content/assets//portfolio/fullsize/5.jpg">
+                            <img class="img-fluid" src="~/Content/assets//portfolio/thumbnails/5.jpg" alt="">
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/6.jpg">
+                            <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/6.jpg" alt="">
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">
+                                    Category
+                                </div>
+                                <div class="project-name">
+                                    Project Name
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4">
-                    <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/2.jpg">
-                        <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/2.jpg" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/3.jpg">
-                        <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/3.jpg" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/4.jpg">
-                        <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/4.jpg" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="~/Content/assets//portfolio/fullsize/5.jpg">
-                        <img class="img-fluid" src="~/Content/assets//portfolio/thumbnails/5.jpg" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="~/Content/assets/portfolio/fullsize/6.jpg">
-                        <img class="img-fluid" src="~/Content/assets/portfolio/thumbnails/6.jpg" alt="">
-                        <div class="portfolio-box-caption p-3">
-                            <div class="project-category text-white-50">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>*@
+            </div>*@
     </section>
 
     <!-- Call to Action Section -->
