@@ -87,42 +87,42 @@ namespace demeter.Controllers
 
         public ActionResult CompareLB()
         {
-            ViewBag.pageSubject = "Compare Two Suburbs in Lebanese Cuisine";
+            ViewBag.pageSubject = "Compare Suburbs in Lebanese Cuisine";
             return View();
             
         }
 
         public ActionResult CompareHD()
         {
-            ViewBag.pageSubject = "Compare Two Suburbs in Hairdressing Business";
+            ViewBag.pageSubject = "Compare Suburbs in Hairdressing Business";
             return View();
 
         }
 
         public ActionResult SliderTK()
         {
-            ViewBag.sliderPageSubject = "Set your best suburbs in Turkish Cuisine";
+            ViewBag.sliderPageSubject = "Choose your best suburbs in Turkish Cuisine";
             return View();
 
         }
 
         public ActionResult SliderME()
         {
-            ViewBag.sliderPageSubject = "Set your best suburbs in Middle Eastern Cuisine";
+            ViewBag.sliderPageSubject = "Choose your best suburbs in Middle Eastern Cuisine";
             return View();
 
         }
 
         public ActionResult SliderLB()
         {
-            ViewBag.sliderPageSubject = "Set your best suburbs in Lebanese Cuisine";
+            ViewBag.sliderPageSubject = "Choose your best suburbs in Lebanese Cuisine";
             return View();
 
         }
 
         public ActionResult SliderHD()
         {
-            ViewBag.sliderPageSubject = "Set your best suburbs in Hairdressing Business";
+            ViewBag.sliderPageSubject = "Choose your best suburbs in Hairdressing Business";
             return View();
 
         }
