@@ -103,8 +103,9 @@
         function check(form)/*function to check userid & password*/ {
             /*the following code checkes whether the entered userid and password are matching*/
             if (form.userid.value == "refugee" && form.pswrd.value == "woman") {
+                window.close();
                 window.open('/Home/LandingPage')/*opens the target page while Id & password matches*/
-                window.top.close();
+               
             }
         }
     </script>
