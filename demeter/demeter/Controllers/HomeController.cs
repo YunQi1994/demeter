@@ -8,6 +8,11 @@ namespace demeter.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Login()
+        {
+            return View();
+        }
+
         public ActionResult Welcome()
         {
             return View();
@@ -125,6 +130,11 @@ namespace demeter.Controllers
             ViewBag.sliderPageSubject = "Choose your best suburbs in Hairdressing Business";
             return View();
 
+        }
+
+        public ActionResult Supporting()
+        {
+            return View();
         }
     }
 }
