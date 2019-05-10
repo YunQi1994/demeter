@@ -31,6 +31,16 @@
     <link rel="stylesheet" type="text/css" href="/Content/assets/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="/Content/assets/login/css/main.css">
     <!--===============================================================================================-->
+    <!-- Font-family google font api -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <style>
+        a, p, h1, h2, h3, h4, h5, h6, div, header, body, button, ul, li, span {
+            font-family: 'Montserrat', light;
+        }
+    </style>
+
 </head>
 <body style="background-color: #666666;">
 
@@ -56,13 +66,14 @@
                         <img src="~/Content/assets/img/demeter_logo_latest.png" class="logo" id="logoDemeter" style="position:center; height:25%; width:25%; margin-top: -20%; margin-left: 35%" />
                     </div>
 
+                    <br />
 
-                    <span class="login100-form-title p-b-43">
-                        Please insert your email and password
+                    <span class="login100-form-title p-b-43" style="font-family: 'Montserrat', light;">
+                        Please insert your username and password
                     </span>
 
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
                         <input class="input100" type="text" name="userid">
                         <span class="focus-input100"></span>
                         <span class="label-input100">Username</span>
@@ -74,49 +85,12 @@
                         <span class="focus-input100"></span>
                         <span class="label-input100">Password</span>
                     </div>
-
                     <br />
-
-                    @*
-                    <div class="flex-sb-m w-full p-t-3 p-b-32">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div>
-            <a href="#" class="txt1">
-                Forgot Password?
-            </a>
-        </div>
-                        </div>
-                    *@
-
-
-
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" onclick="check(this.form)" value="Login">
                             Login
                         </button>
                     </div>
-
-                    @*<div class="text-center p-t-46 p-b-20">
-            <span class="txt2">
-                or sign up using
-            </span>
-        </div>*@
-
-                    @*<div class="login100-form-social flex-c-m">
-            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-                <i class="fa fa-facebook-f" aria-hidden="true"></i>
-            </a>
-
-            <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-        </div>*@
                 </form>
 
                 <div class="login100-more" style="background-image: url('/Content/assets/login/images/bg-01.jpg');">
@@ -128,11 +102,9 @@
     <script language="javascript">
         function check(form)/*function to check userid & password*/ {
             /*the following code checkes whether the entered userid and password are matching*/
-            if (form.userid.value == "refugee" && form.pswrd.value == "women") {
+            if (form.userid.value == "refugee" && form.pswrd.value == "woman") {
                 window.open('/Home/LandingPage')/*opens the target page while Id & password matches*/
-            }
-            else {
-                alert("Error Password or Username")/*displays error message*/
+                window.top.close();
             }
         }
     </script>

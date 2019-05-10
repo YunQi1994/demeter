@@ -141,6 +141,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\css\card.css" />
+    <Content Include="Content\assets\css\popupsupport.css" />
     <Content Include="Content\assets\img\19percent.png" />
     <Content Include="Content\assets\img\300_big.png" />
     <Content Include="Content\assets\img\area1.png" />
@@ -219,6 +221,7 @@
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\modernizr.js" />
     <Content Include="Content\assets\js\notifyMe.js" />
+    <Content Include="Content\assets\js\popupsupport.js" />
     <Content Include="Content\assets\js\vegas.js" />
     <Content Include="Content\assets\login\css\main.css" />
     <Content Include="Content\assets\login\css\util.css" />
@@ -2087,6 +2090,7 @@
     <Content Include="Views\Home\SliderLB.cshtml" />
     <Content Include="Views\Home\SliderHD.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Supporting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
