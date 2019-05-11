@@ -8,10 +8,9 @@
 
 <style>
 
-  .column {
-    width: 100%;
-
-  }
+    .column {
+        width: 100%;
+    }
 
     .image-wrapper {
         position: relative;
@@ -29,7 +28,7 @@
             margin: 5px;
         }
 
-    #table {
+    /*#table {
         padding: 6px;
         border-color: black;
         border-radius: 40px;
@@ -37,29 +36,27 @@
         width: 10%;
         height: 10%;
         border: 6px solid #021a40;
-    }
+    }*/
 
-    #hair {
+    /*#hair {
         padding: 6px;
         background-color: white;
         border-radius: 40px;
         resize: both;
         border-color: white;
         border: 6px solid white;
-    }
+    }*/
 
     #prev {
         padding: 6px;
         background-color: black;
         border-radius: 40px;
         width: 15%;
-
     }
 
         #prev:hover, #next:hover {
             background: #D4AF37;
         }
-
 </style>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -78,7 +75,7 @@
         @*<a href="/Home/Welcome"><div class="col-xs-4"><div class="step step2" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>*@
         <a href="/Home/BusinessSelection"><div class="col-xs-12"><div class="step step2 active" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
         @*<div class="col-xs-4"><div class="step step2"></div></div>*@
-</div>
+    </div>
 </div>
 
 <h3 style="color:black; text-align:center; margin: 2%"><b>Select a Business of Interest</b></h3>
@@ -87,12 +84,12 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-4 col-xs-offset-2">
-             <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/foodSelectIcon.png" class="img-responsive" style="width: 80%; height: 90%; margin-left:20%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')"/></div></a>
-             <h5 style="text-align:center; font-weight:bold; margin-left: 20%">Restaurant Business</h5>
+            <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/restaurant_unselected.png" class="img-responsive" style="width: 80%; height: 90%; margin-left:20%" /></div></a>
+            <h5 style="text-align:center; font-weight:bold; margin-left: 20%; margin-top: -7%">Restaurant Business</h5>
         </div>
 
         <div class="col-xs-4">
-            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hairSelectIcon.png" class="img-responsive" style="width: 85%; height: 90%; margin-right: inherit; margin-top: -2%" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'white')"/></div></a>
+            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hair_unselected.png" class="img-responsive" style="width: 80%; height: 90%; margin-right: inherit; margin-top: -6%" /></div></a>
             <h5 style="text-align:center; font-weight:bold; margin-right: 16%; margin-top:-0.5%">Hairdressing Business</h5>
         </div>
     </div>
@@ -103,34 +100,42 @@
     @*<div id="nextDis" class="disabled">NEXT</div>*@
 </div>
 
-    <!-- Progress Bar -->
-    <script>
-        $('document').ready(function () {
-            var count = 0;
-            $('.step').each(function () {
-                count++;
-            });
-
-            var i = 0;
-            //Next
-            $('#next').on('click', function () {
-                if (count > i + 1) {
-                    i++;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
-            //Back
-            $('#prev').on('click', function () {
-                if (i > 0) {
-                    i--;
-                    $('.active').removeClass('active');
-                    $('.step').eq(i).addClass('active');
-                }
-            });
+<!-- Progress Bar -->
+<script>
+    $('document').ready(function () {
+        var count = 0;
+        $('.step').each(function () {
+            count++;
         });
-    </script>
+
+        var i = 0;
+        //Next
+        $('#next').on('click', function () {
+            if (count > i + 1) {
+                i++;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+        //Back
+        $('#prev').on('click', function () {
+            if (i > 0) {
+                i--;
+                $('.active').removeClass('active');
+                $('.step').eq(i).addClass('active');
+            }
+        });
+    });
+</script>
 
 
-    <!-- Modernizr runs quickly on page load to detect features -->
-    <script src="~/Content/assets/js/modernizr.js"></script>
+<!-- Modernizr runs quickly on page load to detect features -->
+<script src="~/Content/assets/js/modernizr.js"></script>
+<script src="~/Content/assets/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

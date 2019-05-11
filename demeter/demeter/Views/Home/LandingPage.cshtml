@@ -29,6 +29,10 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
+    <!-- Card css -->
+    <link href="~/Content/assets/css/card.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/popupsupport.css" rel="stylesheet" type="text/css">
+
     <!-- Plugin CSS -->
     <link href="~/Content/assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
@@ -44,6 +48,7 @@
             font-family: 'Montserrat', light;
             font-size: 1.5rem;
         }
+
         #landingStart {
             background-color: #16224D;
             font-family: Montserrat, light;
@@ -64,47 +69,46 @@
             margin-top: 1%;
             left: 45%;
         }
-
     </style>
 
 </head>
 
-<body id="page-top">
+<body id="page-top" style="background-color:  #F0F4FF">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 col-xs-12" id="mainNav" style="width: 100%">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 col-xs-12" id="mainNav" style="width: 100%; background-color: #16224D">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" style="font-size:1.1rem; font-family: Montserrat, SemiBold; font-weight: bolder;
-             color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+             color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                href="/Home/LandingPage">Demeter</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0" style="color: white">
                     <li class="nav-item">
                         <a id="burak" class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
-                           color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                           color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                            href="/Home/BusinessSelection">Business Selection</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
-                        color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                        color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                            href="/Home/CuisineSelection">Food Industry</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
-                        color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                        color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                            href="/Home/PreferenceHD">Hairdressing Industry</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
-                        color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                        color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                            href="/Home/Supporting">Supporting Information</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" style="font-size:1rem; font-family: Montserrat, light;
-                        color: #16224D" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', '#16224D')"
+                        color: white" onmouseover="$(this).css('color', '#D4AF37')" onmouseout="$(this).css('color', 'white')"
                            href="/">Log out</a>
                     </li>
                 </ul>
@@ -114,8 +118,9 @@
 
 
     <!-- Masthead -->
-    <header class="thead-light">
-        <div class="container h-100" style="margin: auto; margin-top: 10%; margin-bottom: 8%">
+
+    <section class="page-section" id="xxx" style="background-color: #F0F4FF; width: 100%; margin-top: 0%">
+        <div class="container col-lg-12">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10">
 
@@ -129,7 +134,7 @@
                 </div>
 
                 <div class="col-lg-10 align-self-baseline">
-                    <p class="font-weight-bold" id="slogan" style="font-family: Montserrat, Black; color: #16224D; font-size: 1.22rem">We support Australia's next entrepreneurs in hairdressing and food industry</p>
+                    <p class="font-weight-bold" id="slogan" style="font-family: Montserrat, Black; color: #16224D; font-size: 1.10rem">We support Refugee Women Entrepreneurs finding the right suburb for Hairdressing and Restaurant business</p>
                     <br />
                     <a id="landingStart" style="width: 40%; height: 75px; font-size: 2rem; padding: 1.5%" class="btn btn-primary btn-xl js-scroll-trigger" href="/Home/BusinessSelection"
                        onmouseover="$(this).css('background-color', '#D4AF37')" onmouseout="$(this).css('background-color', '#16224D')">Start</a>
@@ -137,20 +142,22 @@
             </div>
         </div>
 
-        <a href="#about"><div><img id="table" src="~/Content/assets/img/scrolldown_latest.png" class="img-responsive" style="width: 5%; height: 5%; margin-left:47.5%; margin-top:-4%; margin-bottom: 1%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')" /></div></a>
+        <a href="#about"><div><img id="table" src="~/Content/assets/img/scrolldown_latest.png" class="img-responsive" style="width: 5%; height: 5%; margin-left:47.5%; margin-top:4%; margin-bottom: 1%" onmouseover="$(this).css('border-color', '#ddc061')" onmouseout="$(this).css('border-color', 'black')" /></div></a>
 
 
-    </header>
+    </section>
+
+
 
     <!-- About Section -->
-    <section class="page-section" style="background-color: white" id="about">
+    <section class="page-section" style="background-color: #F0F4FF; width:100%; margin-top: -11%" id="about">
 
         <hr class="d-lg-block" />
 
         <br />
 
-        <div class="container">
-            <h2 class="text-center mt-0" style="font-weight: 600; color: #16224D">Did you know?</h2>
+        <div class="container container col-lg-12">
+            <h2 class="text-center mt-0" style="font-weight: 600; color: #16224D; margin-top: -50%">Did you know?</h2>
             @*<hr class="new4" style="margin-top: 3%; margin-bottom: 3%">*@
             <div class="row">
                 <div class="col-lg-4 col-md-6 text-center">
@@ -192,21 +199,10 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 15%; height: 15%; margin-left: 55%" />
+                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 15%; height: 15%; margin-left: 62%" />
                         </div>
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 40%; height: 40%; margin-left: 42%; margin-top: 2%" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="row">
-                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 15%; height: 15%; margin-left: 40%" />
-                        </div>
-                        <div class="row">
-                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 40%; height: 40%; margin-left: 27%; margin-top: 2%" />
+                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 47%; margin-top: 4%" />
                         </div>
                     </div>
                 </div>
@@ -214,10 +210,21 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="mt-5">
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 15%; height: 15%; margin-left: 28%" />
+                            <img id="table" src="~/Content/assets/img/earn1.png" class="img-responsive" style="width: 12%; height: 12%; margin-left: 52%" />
                         </div>
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 40%; height: 40%; margin-left: 15%; margin-top: 2%" />
+                            <img id="table" src="~/Content/assets/img/earn2.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 35%; margin-top: 4%" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="row">
+                            <img id="table" src="~/Content/assets/img/train1.png" class="img-responsive" style="width: 12%; height: 12%; margin-left: 32%" />
+                        </div>
+                        <div class="row">
+                            <img id="table" src="~/Content/assets/img/train2.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 15%; margin-top: -5%" />
                         </div>
                     </div>
                 </div>
@@ -227,22 +234,22 @@
                 <div class="col-lg-6">
                     <div class="mt-5">
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 11%; height: 11%; margin-left: 65%" />
+                            <img id="table" src="~/Content/assets/img/schools.png" class="img-responsive" style="width: 25%; height: 25%; margin-left: 65%" />
                         </div>
-                        <div class="row">
-                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 25%; height: 30%; margin-left: 57%; margin-top: 2%" />
-                        </div>
+                        @*<div class="row">
+                                <img id="table" src="~/Content/assets/img/train2.png" class="img-responsive" style="width: 25%; height: 30%; margin-left: 57%; margin-top: 2%" />
+                            </div>*@
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="mt-5">
                         <div class="row">
-                            <img id="table" src="~/Content/assets/img/area1.png" class="img-responsive" style="width: 11%; height: 11%; margin-left: 20%" />
+                            <img id="table" src="~/Content/assets/img/child1.png" class="img-responsive" style="width: 25%; height: 25%; margin-left: 20%" />
                         </div>
-                        <div class="row">
-                            <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 27%; height: 32%; margin-left: 12%; margin-top: 2%" />
-                        </div>
+                        @*<div class="row">
+                                <img id="table" src="~/Content/assets/img/area2.png" class="img-responsive" style="width: 27%; height: 32%; margin-left: 12%; margin-top: 2%" />
+                            </div>*@
                     </div>
                 </div>
 
@@ -252,64 +259,77 @@
             <br />
 
             <div class="row col-lg-12">
-                <a href="#portfolio"><img id="table" src="~/Content/assets/img/where_button.png" class="img-responsive" style="width: 50%; height: 100%; margin-left: 30%" /></a>
+                <a href="#funding"><img id="table" src="~/Content/assets/img/where_button.png" class="img-responsive" style="width: 50%; height: 100%; margin-left: 30%" /></a>
             </div>
 
             <hr class="d-lg-block" />
         </div>
-
-
-
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" style="background-color: #5067EB; width: 100%">
-        <br />
-        <br />
-        <br />
-
-        <h2 style="color: white" class="text-center mt-0">We help you to find a <span style="font-weight: 700">suitable place to start a business</span> with ease</h2>
-        <br />
-        <br />
-
-        <div class="container col-lg-11">
-
+    <section class="page-section" id="funding" style="background-color: #F0F4FF; width: 100%; margin-top: -12%">
+        <div class="container col-lg-12">
+            <br />
+            <p class="text-center font-weight-bold">We help you to find a suitable place to start a business with ease.</p>
             <div class="row">
-
-                <div class="card col-sm-4" style="width: 55%; height: 90%; background-color: #8897ef">
-                    <img class="card-img-top" src="~/Content/assets/portfolio/fullsize/1.jpg" alt="Card image cap" style="width: 95%; margin-top: 6%; margin-left: 3%; margin-right: 3%; margin-bottom: 1%">
-                    <div class="card-body">
-                        <p class="card-text" style="font-size: 1rem; color: white">Snapshot of existing market condition in three types of cuisines. Information about schools, childcare facilities, legal services, and public transport.</p>
-                        <button class="btn btn-primary" style="background-color:#16244D; border-color:#16244D; margin-left: 30%; width: 40%" onclick="window.location.href='/Home/CuisineSelection'">Go</button>
+                <div class="card-container">
+                    <div class="card" style="height: 300px">
+                        <a href="/Home/CuisineSelection">
+                            <div class="card--display">
+                                <img id="table" src="~/Content/assets/img/foodLand.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 25%; margin-top: 5%" />
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Food Industry</h3>
+                            </div>
+                            <div class="card--hover">
+                                <h4 style="margin-bottom: 8%">Food Industry</h4>
+                                <p style="font-size: medium">Snapshot of existing market condition in three types of cuisines. Information about schools, childcare facilities, legal services, and public transport.</p>
+                                <p class="link">Go</p>
+                            </div>
+                        </a>
+                        <div class="card--border"></div>
                     </div>
                 </div>
-
-                <div class="card col-sm-4" style="width: 55%; height: 90%; background-color: #8897ef">
-                    <img class="card-img-top" src="~/Content/assets/portfolio/fullsize/1.jpg" alt="Card image cap" style="width: 95%; margin-top: 6%; margin-left: 3%; margin-right: 3%; margin-bottom: 1%">
-                    <div class="card-body">
-                        <p class="card-text" style="font-size: 1rem; color: white">Snapshot of existing market condition in three types of cuisines. Information about schools, childcare facilities, legal services, and public transport.</p>
-                        <button class="btn btn-primary" style="background-color:#16244D; border-color:#16244D; margin-left: 30%; width: 40%" onclick="window.location.href='/Home/PreferenceHD'">Go</button>
+                <div class="card-container">
+                    <div class="card" style="height: 300px">
+                        <a href="/Home/PreferenceHD">
+                            <div class="card--display">
+                                <img id="table" src="~/Content/assets/img/hairLand.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 25%; margin-top: 5%" />
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Hairdressing Industry</h3>
+                            </div>
+                            <div class="card--hover">
+                                <h4 style="margin-bottom: 8%">Hairdressing Industry</h4>
+                                <p style="font-size: medium">Snapshot of existing market condition in three types of cuisines. Information about schools, childcare facilities, legal services, and public transport.</p>
+                                <p class="link">Go</p>
+                            </div>
+                        </a>
+                        <div class="card--border"></div>
                     </div>
                 </div>
-
-                <div class="card col-sm-4" style="width: 55%; height: 90%; background-color: #8897ef">
-                    <img class="card-img-top" src="~/Content/assets/portfolio/fullsize/1.jpg" alt="Card image cap" style="width: 95%; margin-top: 6%; margin-left: 3%; margin-right: 3%; margin-bottom: 1%">
-                    <div class="card-body">
-                        <p class="card-text" style="font-size: 1rem; color: white">Grants and Fundings, Accelerators and Incubators Programs that are specifically designed for the refugee entrepreneurs who are seeking to open their business.</p>
-                        <button class="btn btn-primary" style="background-color:#16244D; border-color:#16244D; margin-left: 30%; width: 40%" onclick="window.location.href='#'">Go</button>
+                <div class="card-container">
+                    <div class="card" style="height: 300px">
+                        <a href="/Home/Supporting">
+                            <div class="card--display">
+                                <img id="table" src="~/Content/assets/img/supportLand.png" class="img-responsive" style="width: 50%; height: 50%; margin-left: 25%; margin-top: 15%" />
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 20%">Supporting Information</h3>
+                            </div>
+                            <div class="card--hover">
+                                <h4 style="margin-bottom: 8%">Supporting Information</h4>
+                                <p style="font-size: medium">Grants and Fundings, Accelerators and Incubators Programs that are specifically designed for the refugee entrepreneurs who are seeking to open their business.</p>
+                                <p class="link">Go</p>
+                            </div>
+                        </a>
+                        <div class="card--border"></div>
                     </div>
                 </div>
             </div>
+            <hr class="d-lg-block" />
         </div>
-        <br />
-        <br />
     </section>
 
     <!-- Footer -->
-    <footer class="col-lg-12" style="background-color: #16224D; height: 100px">
+    <footer class="col-lg-12" style="background-color: #F0F4FF; height: 100px">
         <div class="container">
             <br />
-            <div class="small text-center" style="color: white">Copyright &copy; JUP1T0R 2019 / Demeter - Made for strong women</div>
+            <div class="small text-center font-weight-bold" style="color: #16224D">Copyright &copy; JUP1T0R 2019 / Demeter - Made for strong women</div> 
         </div>
     </footer>
 
