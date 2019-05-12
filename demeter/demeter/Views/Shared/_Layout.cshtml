@@ -34,13 +34,6 @@
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
                 <ul id="demeterNav" class="nav navbar-nav navbar-right" style="font-size:large; font-family:Montserrat">
-                    @*<li class="dropdown">
-            <a href="/Home/BusinessSelection" class="dropdown-toggle" data-toggle="dropdown">Business Selection<b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/Home/BusinessSelection">Business Selection</a></li>
-                <li><a href="/Home/CuisineSelection">Cuisine Selection</a></li>
-            </ul>
-        </li>*@
                     <li>
                         <a href="/Home/BusinessSelection">Business Selection</a>
                     </li>
@@ -50,9 +43,6 @@
                     <li>
                         <a href="/Home/Supporting">Supporting Information</a>
                     </li>
-                    <li>
-                        <a href="/">Log out</a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -60,17 +50,6 @@
 
     <div class="container body-content" style="width:100%; background-color: #F0F4FF">
         @RenderBody()
-
-        @*<div id='demo1' data-step='1' data-intro='Step 1' data-position='right'>
-            Step 1
-        </div>
-        <div id='demo2' data-step='2' data-intro='Step 2' data-position='top'>
-            Step 2
-        </div>
-        <div id='demo3' data-step='3' data-intro='Step 3' data-position='left'>
-            Step 3
-        </div>
-        *@
         <hr />
     </div>
 
@@ -134,7 +113,6 @@
                     <h6></h6>
                     <ul class="footer-links">
                         <li><a href="/Home/Supporting">Supporting Information</a></li>
-                        <li><a href="/">Log out</a></li>
                     </ul>
                 </div>
 
@@ -146,7 +124,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <p style="text-align:right" class="copyright-text">
                         Copyright &copy; 2019 All Rights Reserved by
-                        <a href="/Home/Welcome">Demeter</a>.
+                        <a href="/Home/LandingPage">Demeter</a>.
                     </p>
                 </div>
             </div>
@@ -178,7 +156,3 @@
     });
 
 </script>
-
-@*<script type="text/javascript">
-    introJs().start();
-</script>*@
