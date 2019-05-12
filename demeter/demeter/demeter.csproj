@@ -2088,7 +2088,6 @@
     <Content Include="Views\Home\TurkishCuisine.cshtml" />
     <Content Include="Views\Home\LebaneseCuisine.cshtml" />
     <Content Include="Views\Home\MiddleEasternCuisine.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\LandingPage.cshtml" />
     <Content Include="Views\Home\PreferenceTK.cshtml" />
     <Content Include="Views\Home\PreferenceLB.cshtml" />
