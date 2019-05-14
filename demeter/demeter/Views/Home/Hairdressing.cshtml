@@ -1,4 +1,4 @@
-﻿
+﻿\
 @{
     ViewBag.Title = "Hairdressing";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -44,6 +44,8 @@
         #prev:hover, #next:hover {
             background: #D4AF37;
         }
+
+
 </style>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -75,8 +77,8 @@
 @*Hairdressing business map*@
 
 <div class="col-xs-12">
-    <div class="map-responsive">
-        <iframe class="col-xs-12" style="width:100%; height:705px" src="https://tongguoshuanlou.shinyapps.io/Default_Map_Hair/"> </iframe>
+    <div class="map-responsive embed-responsive embed-responsive-16by9">
+        <iframe class="col-xs-12 embed-responsive-item" style="width:100%; height:705px" src="https://tongguoshuanlou.shinyapps.io/Default_Map_Hair/" allowfullscreen> </iframe>
         <div style="text-align:center">
             <a href="/Home/PreferenceHD"><div id="prev">BACK TO PREFERENCES</div></a>
             @*<div id="nextDis" class="disabled">NEXT</div>*@
