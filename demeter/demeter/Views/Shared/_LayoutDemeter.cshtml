@@ -1,13 +1,281 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="shortcut icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/Content/assets/img/favicon.ico" type="image/x-icon">
+
+    <link href="~/Content/assets/css/introjs.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="~/Content/assets/js/intro.js" type="text/javascript"></script>
+
+    <style>
+        a, p, h1, h2, h3, h4, h5, h6, div, header, body, button, ul, li {
+            font-family: 'Montserrat', light;
+            font-size: 1.5rem;
+        }
+
+        #mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9000;
+            background-color: #000;
+            display: none;
+        }
+
+        #boxes .window {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 440px;
+            height: 200px;
+            display: none;
+            z-index: 9999;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        #boxes #dialog {
+            width: 750px;
+            height: 300px;
+            padding: 10px;
+            background-color: #ffffff;
+            font-family: 'Segoe UI Light', sans-serif;
+            font-size: 15pt;
+        }
+
+        #popupfoot {
+            font-size: 16pt;
+            position: absolute;
+            bottom: 0px;
+            width: 250px;
+            left: 250px;
+        }
+    </style>
+
 </head>
 <body>
-    <div>
-        @RenderBody()
+
+    <div id="boxes">
+        <div id="dialog" class="window" style="color: black">
+            <button class="close" style="font-weight: bolder; margin-right: 2%; color: red; opacity: initial">x</button>
+            <h1 style="text-align: center; font-weight:900; margin-bottom: 3%">What are the details?</h1>
+            <p><span style="font-weight: bolder; font-size: 18px">Customer Size:</span> The ratio of population/number of existing business</p>
+            <p><span style="font-weight: bolder; font-size: 18px">Income Level:</span>  Weekly household income of a suburb</p>
+
+            <ul style="list-style-type: none;">
+                <li><p> Low - $0 to $743</p></li>
+                <li><p>Medium Low - $744 to $1,431</p></li>
+                <li><p>Medium High - $,432 to $,433</p></li>
+                <li><p>High - $2,434 +</p></li>
+                @*<li style="margin-top: -3%; font-size: 18px; margin-left: -80%"> <label><input type="checkbox" name="checkbox" class="checkbox_check"> Don't show again!</label><br /></li>*@
+            </ul>
+        </div>
+        <div id="mask"></div>
     </div>
+
+
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner" style="background-color:#16224D; width: 100%">
+        <div class="container" style="background-color:#16224D; width: 90%">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse" style="color:white"></button>
+                <a href="/Home/LandingPage" class="navbar-brand" style="font-size:25px; font-family:Montserrat">Demeter</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul id="demeterNav" class="nav navbar-nav navbar-right" style="font-size:large; font-family:Montserrat">
+                    <li>
+                        <a href="/Home/BusinessSelection">Business Selection</a>
+                    </li>
+                    <li>
+                        <a href="/Home/CuisineSelection">Cuisine Selection</a>
+                    </li>
+                    <li>
+                        <a href="/Home/Supporting">Supporting Information</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container body-content" style="width:100%; background-color: #F0F4FF">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <!-- Site footer -->
+    <footer class="site-footer" style="background-color:#16224D; width: 100%">
+        <div class="container" style="width: 90%">
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <h6><a href="#" style="font-family:Montserrat"></a>About us</h6>
+                    <p class="text-justify">
+                        <i>Empowering Women Refugees</i> - Demeter a digital platform that supports refugee women with dependent children to start a business in the food and the hairdressing industry.
+                        Demeter is an information centre that shows the necessary insights for women refugees as business, market and demographic analysis among all Victoria, to help those refugees make decisions for both entrepreneurship and dwelling. Presently, entrepreneurial refugee women don’t find the right information and resources at the right time.
+                    </p>
+                    <br />
+                    <div class="row">
+                        <a href="https://developers.zomato.com/api" target="_blank"><img style="border: 3px; border-radius: 5px; width: 30%; height: 30%; margin-left: 15%"" src="https://b.zmtcdn.com/images/developers/zomato-developers-logo.png?output-format=webp" alt="Zomato"></a>
+                        <a href="https://developers.google.com/" target="_blank"><img style="border: 3px; border-radius: 5px; width: 30%; height: 30%; margin-left: 10%" src="https://developers.google.com/_static/93acc7096f/images/redesign-14/lockup-color.png" alt="Google"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="col-xs-4 col-md-4">
+                    <h6>Sitemap</h6>
+                    <ul class="footer-links">
+                        <li><a href="/Home/LandingPage">Home</a></li>
+                        <li><a href="/Home/BusinessSelection">Business Selection</a></li>
+                        <li><a href="/Home/CuisineSelection">Cuisine Selection</a></li>
+                    </ul>
+
+                    <ul class="footer-links">
+                        <li><a href="/Home/PreferenceTK">Preference Turkish Cuisine</a></li>
+                        <li><a href="/Home/PreferenceME">Preference Middle Eastern Cuisine</a></li>
+                        <li><a href="/Home/PreferenceLB">Preference Lebanese Cuisine</a></li>
+                        <li><a href="/Home/PreferenceHD">Preference Hairdressing Industry</a></li>
+                    </ul>
+
+                    <ul class="footer-links">
+                        <li><a href="/Home/SliderTK">Choose best suburbs in Turkish Cuisine</a></li>
+                        <li><a href="/Home/SliderME">Choose best suburbs Middle Eastern Cuisine</a></li>
+                        <li><a href="/Home/SliderLB">Choose best suburbs Lebanese Cuisine</a></li>
+                        <li><a href="/Home/SliderHD">Choose best suburbs Hairdressing Business</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-xs-3 col-md-3">
+                    <h6></h6>
+                    <ul class="footer-links">
+                        <li><a href="/Home/Hairdressing">Explore in Hairdressing Map</a></li>
+                        <li><a href="/Home/TurkishCuisine">Explore in Turkish Map</a></li>
+                        <li><a href="/Home/LebaneseCuisine">Explore in Lebanese Map</a></li>
+                        <li><a href="/Home/MiddleEasternCuisine">Explore in Middle Eastern Map</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                    <h6></h6>
+                    <ul class="footer-links">
+                        <li><a href="/Home/CompareHD">Compare in Hairdressing Map</a></li>
+                        <li><a href="/Home/CompareTK">Compare in Turkish Map</a></li>
+                        <li><a href="/Home/CompareLB">Compare in Lebanese Map</a></li>
+                        <li><a href="/Home/CompareME">Compare in Middle Eastern Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-3 col-md-3">
+                    <h6></h6>
+                    <ul class="footer-links">
+                        <li><a href="/Home/Supporting">Supporting Information</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr>
+        </div>
+        <div class="container" style="width:90%">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p style="text-align:right" class="copyright-text">
+                        Copyright &copy; 2019 All Rights Reserved by
+                        <a href="/Home/LandingPage">Demeter</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
+<script src="~/Content/assets/js/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<script type="text/javascript" src="scripts/jquery.cookies.2.2.0.min.js"></script>
+<script src="~/Content/assets/js/jquery.cookie.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $(".navbar-toggle").css("background-color", "#D4AF37");
+        $(".navbar-toggle").css("margin-top", "15px");
+        $("a").css("color", "#eceaea");
+
+    });
+
+    $("a").mouseover(function () {
+        $(this).css("color", "#D4AF37");
+    });
+
+    $("a").mouseout(function () {
+        $(this).css("color", "#eceaea");
+    });
+
+    $(document).ready(function () {
+
+        if ($.cookie('burak')) {
+            //window.alert("Burak");
+            //document.getElementById("boxes").setAttribute("id", "boxes2");
+            hide(document.getElementById("boxes"));
+        }
+
+            //document.cookie="username=Burak";
+            $.cookie('burak', 'seyhan', { expires: 1, path: '/' });
+
+
+
+            var id = '#dialog';
+
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            //Set heigth and width to mask to fill up the whole screen
+            $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+
+            //transition effect
+            $('#mask').fadeIn(500);
+            $('#mask').fadeTo("slow", 0.9);
+
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        $(id).css('top', winH / 2 - $(id).height() / 2);
+        $(id).css('left', winW / 2 - $(id).width() / 2);
+
+        //transition effect
+            $(id).fadeIn(2000);
+
+        //if close button is clicked
+        $('.window .close').click(function (e) {
+            //Cancel the link behavior
+            e.preventDefault();
+
+            $('#mask').hide();
+            $('.window').hide();
+        });
+
+        //if mask is clicked
+        $('#mask').click(function () {
+            $(this).hide();
+            $('.window').hide();
+        });
+
+    });
+
+</script>

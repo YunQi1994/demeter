@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Middle Eastern Cuisine";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutDemeter.cshtml";
     Styles.Render("~/Content/Site.css");
 }
 
@@ -49,18 +49,17 @@
 
 @*Middle Eastern Cuisine business map*@
 
-<div class="col-lg-12">
+<div class="col-lg-12" style="margin-bottom: 0%">
     <div class="map-responsive embed-responsive embed-responsive-16by9">
-        <iframe class="col-xs-12 embed-responsive-item" style="width:100%; height:705px" src="https://tongguoshuanlou.shinyapps.io/Default_Map_ME/" allowfullscreen> </iframe>
-        <div style="text-align:center">
-            <a href="/Home/PreferenceME"><div id="prev">BACK TO PREFERENCES</div></a>
-            @*<div id="nextDis" class="disabled">NEXT</div>*@
-        </div>
+        <iframe class="col-xs-12 embed-responsive-item" style="width:100%; height:710px; margin-left: 0%" src="https://tongguoshuanlou.shinyapps.io/Default_Map_ME/" allowfullscreen> </iframe>
     </div>
-    <br />
-    <br />
 </div>
-
+<div style="text-align:center">
+    <a href="/Home/PreferenceME"><div id="prev">BACK TO PREFERENCES</div></a>
+    @*<div id="nextDis" class="disabled">NEXT</div>*@
+</div>
+<br />
+<br />
 <!-- Hairdressing Map -->
 @*<script type='text/javascript'>var divElement = document.getElementById('viz1554703976737'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1080px'; vizElement.style.height = '917px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>*@
 
