@@ -85,12 +85,54 @@
             width: 30%;
         }
 
+        #tr {
+            border: 0.1px solid #021a40;
+            padding: 4px;
+            background-color: #16224D;
+            border-radius: 50px
+        }
+
+        #scroll {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: #16224D;
+            text-indent: -9999px;
+            display: none;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border-radius: 60px
+        }
+
+            #scroll span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -8px;
+                margin-top: -12px;
+                height: 0;
+                width: 0;
+                border: 8px solid transparent;
+                border-bottom-color: #ffffff;
+            }
+
+            #scroll:hover {
+                background-color: #D4AF37;
+                opacity: 1;
+                filter: "alpha(opacity=100)";
+                -ms-filter: "alpha(opacity=100)";
+            }
+
     </style>
 
 </head>
 
 <body id="page-top" style="background-color:  #F0F4FF">
 
+    <a href="#" id="scroll" style="display: none;"><span></span></a>
 
     <div id="myModal1" class="modal fade" style="margin-top: 10%">
         <div class="modal-dialog">
@@ -489,10 +531,14 @@
                     <hr class="new4" style="margin-top: 3%; margin-bottom: 3%">
                     <div class="row">
                         <div class="col-lg-6 text-center">
+                            <br />
                             <a href="#funding" onmouseover="$(this).css('color', '#5067EB')" onmouseout="$(this).css('color', '#16224D')"><h5 class="font-weight-bolder" onmouseover="$(this).css('color', '#5067EB')" onmouseout="$(this).css('color', '#16224D')" style="color: #16224D; font-size: 1.2rem">Funding Program</h5></a>
+                            <a href="#funding"><div><img id="tr" src="~/Content/assets/img/supportFund.jpg" class="img-responsive center" alt="fund" style="background-position: center; width: 80%; border-radius: 30px; width: 100%; height: 350px; margin-top: 10%" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')" /></div></a>
                         </div>
                         <div class="col-lg-6 text-center">
+                            <br />
                             <a href="#incubator" onmouseover="$(this).css('color', '#5067EB')" onmouseout="$(this).css('color', '#16224D')"><h5 class="font-weight-bolder" onmouseover="$(this).css('color', '#5067EB')" onmouseout="$(this).css('color', '#16224D')" style="color: #16224D; font-size: 1.2rem">Incubators / Accelerators</h5></a>
+                            <a href="#incubator"><div><img id="tr" src="~/Content/assets/img/supportAccel.jpg" class="img-responsive center" alt="fund" style="background-position: center; width: 80%; border-radius: 30px; width: 100%; height: 350px; margin-top: 10%" onmouseover="$(this).css('background-color', '#ddc061')" onmouseout="$(this).css('background-color', 'black')" /></div></a>
                         </div>
                     </div>
                 </div>
@@ -501,22 +547,22 @@
     </section>
 
     <!-- Funding Section -->
-    <section class="page-section" id="funding" style="background-color: #F0F4FF; width: 100%; margin-top: -12%">
+    <section class="page-section" id="funding" style="background-color: #F0F4FF; width: 100%; margin-top: -5%">
         <div class="container col-lg-12">
             <h2 class="text-md-center mt-0" style="font-weight: bolder; color: #16224D">Funding Program</h2>
             <br />
             <p>These programs vary from Funding to Microfinance organizations, who are helping refugee women and new Australians to have access to finance and provide additional support in order to set up small scale or self-sustainable business.</p>
             <div class="row">
-                <div class="card-container">
+                <div class="card-container img-responsive">
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal1" href="#">
                             <div class="card--display">
                                 <img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">
-                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Thrive Refugee Enterprise </h3>
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 20%">Thrive Refugee Enterprise </h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">Thrive Refugee Enterprise </h4>
-                                <p style="font-size: small">Thrive is a not-for-profit organisation established with the vital financial backing of Westpac, private donors and the generous support of leading companies such as Allianz, Deloitte, Gilbert & Tobin, KPMG, Korn Ferry, LOUD, Newgate and Equifax. Primary role is to provide microfinancing and business support that can help refugee entrepreneurs start and grow viable new businesses.</p>
+                                <p style="font-size: 12px">Thrive is a not-for-profit organisation established with the vital financial backing of Westpac, private donors and the generous support of leading companies such as Allianz, Deloitte, Gilbert & Tobin, KPMG, Korn Ferry, LOUD, Newgate and Equifax. Primary role is to provide microfinancing and business support that can help refugee entrepreneurs start and grow viable new businesses.</p>
                                 <p class="link">Click to see details</p>
                             </div>
                         </a>
@@ -527,7 +573,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal2" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/Small business grants.png" alt="Small Business" style="background-position: center" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Small Business Grants VIC</h3>
                             </div>
                             <div class="card--hover">
@@ -543,7 +589,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal3" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/Many-Rivers-Logo-600x259.jpg" alt="Many Rivers" style="background-position: center; width: 60%; margin-top: 10%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Many Rivers</h3>
                             </div>
                             <div class="card--hover">
@@ -562,7 +608,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal4" href="#">
                             <div class="card--display">
-                                <img src="https://www.asrc.org.au/wp-content/uploads/2013/04/ASRC_Digital-Logo_Pos_Master_Horizontal_RGB.jpg" alt="ASRC" style="width: 43%; margin-top: 5.5%" class="center">
+                                <img src="https://www.asrc.org.au/wp-content/uploads/2013/04/ASRC_Digital-Logo_Pos_Master_Horizontal_RGB.jpg" alt="ASRC" style="width: 73%; margin-top: 3.5%" class="center">
                                 <h2 class="text-center" style="font-weight: bold; margin-top: 15%">ASRC</h2>
                             </div>
                             <div class="card--hover">
@@ -578,7 +624,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal5" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/Launch Vic.png" alt="VicLaunch" style="background-position: center; width: 70%; margin-top: 15%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">VicLaunch Grant</h3>
                             </div>
                             <div class="card--hover">
@@ -594,7 +640,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal6" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/VIC women trust.png" alt="VicLaunch" style="background-position: center; width: 30%; margin-top: 5%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Victorian Women Trust </h3>
                             </div>
                             <div class="card--hover">
@@ -623,7 +669,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal7" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/stepping stones.png" alt="Stepping" style="background-position: center; width: 40%; margin-top: 5%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Stepping Stones</h3>
                             </div>
                             <div class="card--hover">
@@ -639,8 +685,8 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal8" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
-                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Sister Works</h3>
+                                <img src="~/Content/assets/img/SisterWorks.jpg" alt="sister" style="background-position: center; width: 75%; margin-top: 13%" class="center">
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 20%">Sister Works</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">Sister Works </h4>
@@ -655,12 +701,12 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal9" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/Unbound.jpg" alt="unbound" style="background-position: center; width: 35%; margin-top: 5%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Unbound</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">Unbound</h4>
-                                <p style="font-size: small">Unbound is a Victorian educational social enterprise that is passionate about creating a diverse startup sector through cross-cultural and engaging learning experiences. The Generation Launch, an innovative program to support migrants, refugees and new Australians to actively join the Victorian startup ecosystem, and support them to create the next generation of successful high-growth ventures.</p>
+                                <p style="font-size: 12px">Unbound is a Victorian educational social enterprise that is passionate about creating a diverse startup sector through cross-cultural and engaging learning experiences. The Generation Launch, an innovative program to support migrants, refugees and new Australians to actively join the Victorian startup ecosystem, and support them to create the next generation of successful high-growth ventures.</p>
                                 <p class="link">Click to see details</p>
                             </div>
                         </a>
@@ -674,12 +720,12 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal13" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/Free to Food.png" alt="freeto" style="background-position: center; width: 35%; margin-top: 15%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">FreetoFood</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">FreetoFood</h4>
-                                <p>Free to Feed is a not-for-profit social enterprise in awe of the potential and spirit of refugees, people seeking asylum and new migrants – and appreciative of what they want to offer as new community members – we aim to champion their unique skills and individual stories.</p>
+                                <p style="font-size: 12px">Free to Feed is a not-for-profit social enterprise in awe of the potential and spirit of refugees, people seeking asylum and new migrants – and appreciative of what they want to offer as new community members – we aim to champion their unique skills and individual stories.</p>
                                 <p class="link">Click to see details</p>
                             </div>
                         </a>
@@ -690,7 +736,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal11" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/live in melbourne.png" alt="live" style="background-position: center; width: 65%; margin-top: 20%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Live In Melbourne</h3>
                             </div>
                             <div class="card--hover">
@@ -706,12 +752,12 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal12" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/HatchQuarter.png" alt="hatch" style="background-position: center; width: 65%; margin-top: 10%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Hatch Quarter Playbook</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">Hatch Quarter Playbook</h4>
-                                <p style="font-size: small">Hatch Quarter is a vibrant innovation hub and co-working space for entrepreneurs, startups and professionals. With LaunchVic funding, Hatch Quarter will create a playbook to help first generation migrants and refugees who seek to launch a startup and successfully integrate themselves into the Victorian startup ecosystem. The Hatch Quarter will also deliver a number of meetups to build a supportive community for international startup entrepreneurs.</p>
+                                <p style="font-size: 11px">Hatch Quarter is a vibrant innovation hub and co-working space for entrepreneurs, startups and professionals. With LaunchVic funding, Hatch Quarter will create a playbook to help first generation migrants and refugees who seek to launch a startup and successfully integrate themselves into the Victorian startup ecosystem. The Hatch Quarter will also deliver a number of meetups to build a supportive community for international startup entrepreneurs.</p>
                                 <p class="link">Click to see details</p>
                             </div>
                         </a>
@@ -725,12 +771,12 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal10" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
-                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Space2b</h3>
+                                <img src="~/Content/assets/img/space 2b.jpeg" alt="space2b" style="background-position: center; width: 40%; margin-top: 10%" class="center">
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 20%">Space2b</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">Space2b</h4>
-                                <p style="font-size: smaller">Space2b is an art and design of social enterprise. It has been established to support people seeking asylum, refugees and newly arrived migrants to become financially independent.  This is achieved through creative enterprise, workplace training and business mentoring. "An opportunity for newly arrived migrants to build on their traditional skills and knowledge,  gain confidence and take their first steps on the path to financial independence.</p>
+                                <p style="font-size: 12px">Space2b is an art and design of social enterprise. It has been established to support people seeking asylum, refugees and newly arrived migrants to become financially independent.  This is achieved through creative enterprise, workplace training and business mentoring. "An opportunity for newly arrived migrants to build on their traditional skills and knowledge,  gain confidence and take their first steps on the path to financial independence.</p>
                                 <p class="link">Click to see details</p>
                             </div>
                         </a>
@@ -741,7 +787,7 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal14" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
+                                <img src="~/Content/assets/img/cultov8.png" alt="cultov" style="background-position: center; width: 65%; margin-top: 10%" class="center">
                                 <h3 class="text-center" style="font-weight: bold; margin-top: 15%">Cultov8</h3>
                             </div>
                             <div class="card--hover">
@@ -757,8 +803,8 @@
                     <div class="card" style="height: 300px">
                         <a data-toggle="modal" data-target="#myModal15" href="#">
                             <div class="card--display">
-                                @*<img src="http://thriverefugeeenterprise.org.au/wp-content/uploads/2017/05/logo-116x98.png" alt="Thrive Refugee Enterprise" style="background-position: center" class="center">*@
-                                <h3 class="text-center" style="font-weight: bold; margin-top: 15%">YGAP</h3>
+                                <img src="~/Content/assets/img/YGAP.png" alt="ygap" style="background-position: center; width: 45%; margin-top: 25%" class="center">
+                                <h3 class="text-center" style="font-weight: bold; margin-top: 25%">YGAP</h3>
                             </div>
                             <div class="card--hover">
                                 <h4 style="margin-bottom: 8%">YGAP</h4>
@@ -777,14 +823,11 @@
     <br />
 
     <!-- Footer -->
-    <footer class="col-lg-12" style="background-color: #F0F4FF; font-weight: 900; height: 100px; font-size: 1.5rem">
-        <a id="landingStart" style="width: 25%; height: 55px; font-size: 15px; padding-top: -1.5%; background-color: #16224D; margin-top: -7%; margin-left: 38%" class="btn btn-primary btn-xl js-scroll-trigger text-center" href="/Home/LandingPage"
+    <footer class="col-lg-11" style="background-color: #F0F4FF; font-weight: 900; height: 100px; width: 60%; font-size: 1.5rem">
+        <a id="landingStart" style="width: 25%; height: 55px; font-size: 15px; padding-top: -1.5%; background-color: #16224D; margin-top: -15%; margin-left: 38%" class="btn btn-primary btn-xl js-scroll-trigger text-center" href="/Home/LandingPage"
            onmouseover="$(this).css('background-color', '#D4AF37')" onmouseout="$(this).css('background-color', '#16224D')">Back to Home</a>
-
-        <div class="container">
-            <br />
-            <div class="small text-center" style="color: #16224D">Copyright &copy; JUP1T0R 2019 / Demeter - Made for strong women</div>
-        </div>
+        
+        <div class="small text-center font-weight-bold" style="color: #16224D; text-align: left">Copyright &copy; JUP1T0R 2019 / Demeter - Made for strong women</div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
@@ -798,6 +841,23 @@
     <!-- Custom scripts for this template -->
     <script src="~/Content/assets/js/creative.min.js"></script>
     <script src="~/Content/assets/js/creative.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 400);
+                return false;
+            });
+        });
+    </script>
 
 </body>
 
