@@ -144,7 +144,9 @@
     <Content Include="Content\assets\css\card.css" />
     <Content Include="Content\assets\css\popupsupport.css" />
     <Content Include="Content\assets\css\scrollDown.css" />
+    <Content Include="Content\assets\img\111.png" />
     <Content Include="Content\assets\img\19percent.png" />
+    <Content Include="Content\assets\img\222.png" />
     <Content Include="Content\assets\img\300_big.png" />
     <Content Include="Content\assets\img\area1.png" />
     <Content Include="Content\assets\img\area2.png" />
