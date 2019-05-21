@@ -2075,6 +2075,8 @@
     <Content Include="Content\assets\login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Content\assets\login\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Content\assets\login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\assets\img\baby.psd" />
+    <Content Include="Content\assets\img\hat.psd" />
     <None Include="Properties\PublishProfiles\myVM - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\myVM - Web Deploy1.pubxml" />
     <None Include="Properties\PublishProfiles\myvm3 - Web Deploy.pubxml" />
