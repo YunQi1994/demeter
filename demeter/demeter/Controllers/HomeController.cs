@@ -13,11 +13,6 @@ namespace demeter.Controllers
             return View();
         }
 
-        public ActionResult Welcome()
-        {
-            return View();
-        }
-
         public ActionResult BusinessSelection()
         {
             return View();
