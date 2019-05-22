@@ -28,27 +28,6 @@
             margin: 5px;
         }
 
-    /*#table {
-        padding: 6px;
-        border-color: black;
-        border-radius: 40px;
-        background-color: #ececec;
-        width: 10%;
-        height: 10%;
-        border: 6px solid #021a40;
-    }*/
-
-    /*#hair {
-        padding: 6px;
-        background-color: white;
-        border-radius: 40px;
-        resize: both;
-        border-color: white;
-        border: 6px solid white;
-    }*/
-
-/*#table:hover { content: url('https://i.imgur.com/Alv4zuc.png'); }*/
-
     #table:hover {
         content: url('/Content/assets/img/restaurant_selected.png');
     }
@@ -75,43 +54,42 @@
 <div class="container" style="margin-top:5%">
 
     <div class="row line">
-        @*<h4 class="col-xs-4 stepText2"><b>Get Started</b></h4>*@
         <h4 class="col-xs-4 stepText2"></h4>
         <h4 class="col-xs-4 stepText2" style="font-size:1.7rem; margin-top:2%"><b>Business Selection</b></h4>
         <h3 class="col-xs-4 stepText2"></h3>
     </div>
 
     <div class="row">
-        @*<a href="/Home/Welcome"><div class="col-xs-4"><div class="step step2" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>*@
         <a href="/Home/BusinessSelection"><div class="col-xs-12"><div class="step step2 active" onmouseover="$(this).css('background-color', '#16224D')" onmouseout="$(this).css('background-color', '#D4AF37')" style="background-color:#D4AF37"></div></div></a>
-        @*<div class="col-xs-4"><div class="step step2"></div></div>*@
     </div>
 </div>
 
-<br />
 <h3 style="color:black; text-align:center; margin: 2%"><b>Select a Business of Interest</b></h3>
-<br />
+
 @*Business Selection Icons*@
 <div class="container">
     <div class="row">
-        <div class="col-xs-4 col-xs-offset-2">
-            <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/restaurant_unselected.png" class="img-responsive" style="width: 80%; height: 90%; margin-left:20%" /></div></a>
-            <h5 style="text-align:center; font-weight:bold; margin-left: 20%; margin-top: -7%">Restaurant Business</h5>
+        <div class="col-lg-4 col-md-4 col-xs-4 col-xs-offset-2">
+            <a href="/Home/CuisineSelection"><div><img id="table" src="~/Content/assets/img/restaurant_unselected.png" class="img-responsive" style="width: 100%; height: 100%" /></div></a>
         </div>
-
-        <div class="col-xs-4">
-            <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hair_unselected.png" class="img-responsive" style="width: 80%; height: 90%; margin-right: inherit; margin-top: -6%" /></div></a>
-            <h5 style="text-align:center; font-weight:bold; margin-right: 16%; margin-top:-0.5%">Hairdressing Business</h5>
+            <div class="col-lg-4 col-md-4 col-xs-4">
+                <a href="/Home/PreferenceHD"><div><img id="hair" src="~/Content/assets/img/hair_unselected.png" class="img-responsive" style="width: 100%; height: 100%; margin-top: -6%" /></div></a>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-4 col-xs-offset-2">
+            <h4 style="text-align:center; font-weight:bold; margin-left: 0%; margin-top: -7%">Restaurant Business</h4>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+            <h4 style="text-align:center; font-weight:bold; margin-right: 0%; margin-top: -7%">Hairdressing Business</h4>
         </div>
     </div>
 </div>
 
 <br />
-<br />
 
-<div style="text-align:center" class="col-lg-12 col-sm-12 col-md-12">
+<div style="text-align:center; margin-top: 0%" class="col-lg-12 col-sm-12 col-md-12">
     <a href="/Home/LandingPage"><div id="prev">BACK TO HOME</div></a>
-    @*<div id="nextDis" class="disabled">NEXT</div>*@
 </div>
 
 <!-- Progress Bar -->
