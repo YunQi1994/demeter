@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e68ab05d787418986b1e936f2c9cfc9" Name="Diagram1" >
+        <EntityTypeShape EntityType="Demeter_Model.Childcare" Width="1.875" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Demeter_Model.School" Width="2.375" PointX="2.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Demeter_Model.LegalServices" Width="2.375" PointX="0.5" PointY="4.125" />
+        <EntityTypeShape EntityType="Demeter_Model.RankingHair" Width="2.5" PointX="3.125" PointY="4.125" />
+        <EntityTypeShape EntityType="Demeter_Model.RankingLB" Width="2.75" PointX="5.25" PointY="0.5" />
+        <EntityTypeShape EntityType="Demeter_Model.RankingME" Width="2.75" PointX="6" PointY="5.5" />
+        <EntityTypeShape EntityType="Demeter_Model.RankingTK" Width="2.875" PointX="6.25" PointY="3" />
+        <EntityTypeShape EntityType="Demeter_Model.Transport" Width="2.25" PointX="3.125" PointY="6.625" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
