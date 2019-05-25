@@ -132,6 +132,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Childcare.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Demeter_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +149,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Demeter_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LegalServices.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RankingHair.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RankingLB.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RankingME.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RankingTK.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\School.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transport.cs">
+      <DependentUpon>Demeter_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
