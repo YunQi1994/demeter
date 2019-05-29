@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/Site.css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -83,7 +82,7 @@
         <div id="mask"></div>
     </div>
 
-
+    <!-- Site header -->
     <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner" style="background-color:#16224D; width: 100%">
         <div class="container" style="background-color:#16224D; width: 90%">
             <div class="navbar-header">
@@ -106,6 +105,7 @@
         </div>
     </header>
 
+    <!-- Site Body -->
     <div class="container body-content" style="width:100%; background-color: #F0F4FF">
         @RenderBody()
         <hr />
@@ -123,7 +123,7 @@
                     </p>
                     <br />
                     <div class="row">
-                        <a href="https://developers.zomato.com/api" target="_blank"><img style="border: 3px; border-radius: 5px; width: 30%; height: 30%; margin-left: 15%"" src="https://b.zmtcdn.com/images/developers/zomato-developers-logo.png?output-format=webp" alt="Zomato"></a>
+                        <a href="https://developers.zomato.com/api" target="_blank"><img style="border: 3px; border-radius: 5px; width: 30%; height: 30%; margin-left: 15%" " src="https://b.zmtcdn.com/images/developers/zomato-developers-logo.png?output-format=webp" alt="Zomato"></a>
                         <a href="https://developers.google.com/" target="_blank"><img style="border: 3px; border-radius: 5px; width: 30%; height: 30%; margin-left: 10%" src="https://developers.google.com/_static/93acc7096f/images/redesign-14/lockup-color.png" alt="Google"></a>
                     </div>
                 </div>
